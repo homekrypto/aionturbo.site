@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Addepto</title>
+    <meta name="description" content="Latest insights on AI, machine learning, and data science from Addepto's expert team.">
+    <meta name="keywords" content="AI blog, machine learning insights, data science articles, artificial intelligence news">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .blog-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-category {
+            background: #6366f1;
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .blog-title {
+            color: #1a1a2e;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        .blog-title a {
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-title a:hover {
+            color: #6366f1;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+        }
+        
+        .author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #6366f1;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        .search-bar {
+            margin-bottom: 2rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 1rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #6366f1;
+        }
+        
+        .blog-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 20px;
+            background: #fff;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #6366f1;
+            background: #6366f1;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="../index.html">Addepto</a>
+                </div>
+                
+                <nav class="nav-menu">
+                    <div class="dropdown">
+                        <a href="../index.html#services">Services</a>
+                        <div class="dropdown-content">
+                            <a href="machine-learning.html">Machine Learning</a>
+                            <a href="data-science.html">Data Science</a>
+                            <a href="ai-consulting.html">AI Consulting</a>
+                            <a href="data-engineering.html">Data Engineering</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="../index.html#industries">Industries</a>
+                        <div class="dropdown-content">
+                            <a href="fintech.html">Fintech</a>
+                            <a href="healthcare.html">Healthcare</a>
+                            <a href="retail.html">Retail</a>
+                            <a href="manufacturing.html">Manufacturing</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="../index.html#company">Company</a>
+                        <div class="dropdown-content">
+                            <a href="about.html">About Us</a>
+                            <a href="team.html">Team</a>
+                            <a href="careers.html">Careers</a>
+                            <a href="case-studies.html">Case Studies</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="../index.html#resources">Resources</a>
+                        <div class="dropdown-content">
+                            <a href="blog.html">Blog</a>
+                            <a href="whitepapers.html">Whitepapers</a>
+                            <a href="webinars.html">Webinars</a>
+                            <a href="tools.html">Tools</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <a href="contact.html" class="cta-button">Get Started</a>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="section" style="margin-top: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">AI & Data Science Blog</h1>
+                <p class="section-subtitle">
+                    Latest insights, trends, and best practices in artificial intelligence and data science
+                </p>
+            </div>
+            
+            <div class="search-bar text-center">
+                <input type="text" class="search-input" placeholder="Search articles...">
+            </div>
+            
+            <div class="blog-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Machine Learning</button>
+                <button class="filter-btn">Data Science</button>
+                <button class="filter-btn">AI Strategy</button>
+                <button class="filter-btn">Case Studies</button>
+                <button class="filter-btn">Industry Insights</button>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">🤖</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Machine Learning</span>
+                            <span>December 15, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">The Future of AutoML: Democratizing Machine Learning</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Explore how Automated Machine Learning is making AI accessible to businesses of all sizes and technical capabilities.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">JD</div>
+                            <span>John Doe, Senior Data Scientist</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">📊</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Data Science</span>
+                            <span>December 10, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">Building Robust Data Pipelines for Real-Time Analytics</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Learn best practices for creating scalable data pipelines that can handle high-volume, real-time data processing.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">SM</div>
+                            <span>Sarah Miller, Data Engineer</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">🎯</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">AI Strategy</span>
+                            <span>December 5, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">AI Implementation Roadmap: From Concept to Production</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to successfully implementing AI solutions in enterprise environments.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">MJ</div>
+                            <span>Mike Johnson, AI Consultant</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">🔍</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Case Studies</span>
+                            <span>November 28, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">How We Reduced Customer Churn by 40% Using Predictive Analytics</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            A detailed case study on implementing predictive models to identify and prevent customer churn.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">EB</div>
+                            <span>Emily Brown, Data Scientist</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">🏥</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Industry Insights</span>
+                            <span>November 20, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">AI in Healthcare: Transforming Patient Care and Medical Research</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Exploring the revolutionary impact of AI technologies on healthcare delivery and medical innovation.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">DW</div>
+                            <span>Dr. David Wilson, Healthcare AI Specialist</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">🔐</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">AI Strategy</span>
+                            <span>November 15, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">Ethical AI: Building Responsible Machine Learning Systems</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Understanding the importance of ethics in AI development and how to build fair, transparent systems.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">LT</div>
+                            <span>Lisa Thompson, AI Ethics Researcher</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">🚀</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Machine Learning</span>
+                            <span>November 8, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">MLOps Best Practices: Streamlining ML Model Deployment</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Learn how to implement MLOps practices to improve model deployment, monitoring, and maintenance.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">RC</div>
+                            <span>Robert Chen, MLOps Engineer</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">💰</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Industry Insights</span>
+                            <span>November 1, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">AI in Fintech: Revolutionizing Financial Services</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Discover how artificial intelligence is transforming the financial industry through automation and insights.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">AG</div>
+                            <span>Anna Garcia, Fintech Specialist</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">📈</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Data Science</span>
+                            <span>October 25, 2024</span>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="#" onclick="return false;">Advanced Feature Engineering Techniques for Better ML Models</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Master advanced feature engineering methods to improve your machine learning model performance.
+                        </p>
+                        <div class="blog-author">
+                            <div class="author-avatar">KL</div>
+                            <span>Kevin Lee, Senior Data Scientist</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stay Updated with AI Insights</h2>
+            <p>Subscribe to our newsletter for the latest AI and data science content</p>
+            <form class="newsletter-form" style="justify-content: center; max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Addepto</h4>
+                    <p>Leading AI and Data Science consultancy helping enterprises unlock the power of their data.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="GitHub">🐙</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="machine-learning.html">Machine Learning</a></li>
+                        <li><a href="data-science.html">Data Science</a></li>
+                        <li><a href="ai-consulting.html">AI Consulting</a></li>
+                        <li><a href="data-engineering.html">Data Engineering</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul class="footer-links">
+                        <li><a href="fintech.html">Fintech</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                        <li><a href="retail.html">Retail</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with the latest AI insights and company news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Addepto. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/mobile-menu.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
+    <script src="../assets/js/scroll-effects.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+        // Blog filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+            const searchInput = document.querySelector('.search-input');
+            
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.textContent.toLowerCase();
+                    
+                    blogCards.forEach(card => {
+                        const category = card.querySelector('.blog-category').textContent.toLowerCase();
+                        
+                        if (filter === 'all' || category.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                blogCards.forEach(card => {
+                    const title = card.querySelector('.blog-title a').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

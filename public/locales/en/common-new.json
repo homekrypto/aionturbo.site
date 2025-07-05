@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "AI on Turbo - Advanced AI Solutions for Business",
+    "description": "Transform your business with cutting-edge AI solutions. We deliver intelligent automation, advanced analytics, and innovative AI technologies that drive growth and efficiency."
+  },
+  "hero": {
+    "title": "Your Trusted AI Partner",
+    "subtitle": "Expert AI Consultancy Since 2017.",
+    "description": "Every platform business will be transformed by AI in the next 5 years. Businesses that keep control over their AI capabilities will quickly gain a competitive edge over those that subscribe to and are dependent on off-the-shelf AI providers.",
+    "cta": {
+      "consultation": "Book AI Consultation",
+      "contact": "Contact Us"
+    }
+  },
+  "featured": {
+    "title": "As featured in"
+  },
+  "platform": {
+    "title": "Your In-House Artificial Intelligence Platform",
+    "description": "Build custom AI solutions that integrate seamlessly with your existing systems and workflows."
+  },
+  "services": {
+    "automation": {
+      "title": "Intelligent Automation",
+      "description": "Automate complex workflows and decision-making processes with AI-powered systems."
+    },
+    "analytics": {
+      "title": "Advanced Analytics", 
+      "description": "Extract insights from your data with machine learning and predictive analytics."
+    },
+    "consulting": {
+      "title": "AI Strategy Consulting",
+      "description": "Develop comprehensive AI strategies aligned with your business objectives."
+    }
+  },
+  "why": {
+    "title": "Why Choose AI on Turbo",
+    "description": "We combine deep technical expertise with business acumen to deliver AI solutions that drive real results.",
+    "expertise": {
+      "title": "Proven Expertise",
+      "description": "Over 7 years of experience in AI and machine learning across various industries."
+    },
+    "custom": {
+      "title": "Custom Solutions",
+      "description": "Tailored AI solutions designed specifically for your business needs and challenges."
+    },
+    "support": {
+      "title": "Ongoing Support",
+      "description": "Comprehensive support and maintenance to ensure your AI systems perform optimally."
+    }
+  },
+  "stats": {
+    "projects": "Projects Completed",
+    "satisfaction": "Client Satisfaction"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business with AI?",
+    "description": "Let us help you unlock the full potential of artificial intelligence for your organization.",
+    "contact": "Get Started Today",
+    "learn": "Learn More"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services", 
+    "products": "Products",
+    "solutions": "Solutions",
+    "about": "About",
+    "contact": "Contact",
+    "caseStudies": "Case Studies"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "products": "Products",
+    "solutions": "Solutions",
+    "caseStudies": "Case Studies",
+    "industries": "Industries",
+    "viewAll": "View All {{category}} →",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact Us",
+    "copyright": "© 2024 AI on Turbo. All rights reserved."
+  }
+}

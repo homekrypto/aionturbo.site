@@ -1,0 +1,415 @@
+/**
+ * Global Footer Controls Styles
+ * Provides styling for language, currency, and theme selectors
+ * Updated for light footer background
+ */
+
+.global-footer-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Dark theme overrides for footer controls */
+[data-theme="dark"] .global-footer-controls {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.control-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+/* Dark theme label color */
+[data-theme="dark"] .control-label {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.selector-container {
+  position: relative;
+}
+
+.selector-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.375rem;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.selector-button:hover {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.selector-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.selector-button:active {
+  transform: translateY(1px);
+}
+
+.dropdown-arrow {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s ease;
+}
+
+.dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.375rem;
+  box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.1), 0 -10px 10px -5px rgba(0, 0, 0, 0.05);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.dropdown.open {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item.active {
+  background: rgba(99, 102, 241, 0.8);
+  color: #ffffff;
+}
+
+.dropdown-item.active:hover {
+  background: rgba(99, 102, 241, 0.9);
+}
+
+.language-name,
+.theme-name {
+  font-weight: 500;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+  display: flex;
+  gap: 0.25rem;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.theme-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.theme-button.active {
+  background: rgba(99, 102, 241, 0.8);
+  color: #ffffff;
+}
+
+.theme-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.theme-icon {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+/* Dark theme overrides for when global controls are in dark theme context */
+[data-theme="dark"] .selector-button,
+[data-theme="dark"] .theme-switcher {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.98);
+}
+
+[data-theme="dark"] .selector-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] .dropdown-arrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .dropdown {
+  background: #1f2937;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.4), 0 -10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .dropdown-item.active {
+  background: rgba(167, 139, 250, 0.9);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .dropdown-item.active:hover {
+  background: rgba(167, 139, 250, 0.95);
+}
+
+[data-theme="dark"] .theme-button {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .theme-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .theme-button.active {
+  background: rgba(167, 139, 250, 0.9);
+  color: #ffffff;
+}
+
+/* Right-to-left language support */
+[lang="ar"] .global-footer-controls,
+[data-lang="ar"] .global-footer-controls {
+  direction: rtl;
+}
+
+[lang="ar"] .dropdown,
+[data-lang="ar"] .dropdown {
+  direction: rtl;
+  text-align: right;
+}
+
+[lang="ar"] .dropdown-item,
+[data-lang="ar"] .dropdown-item {
+  text-align: right;
+}
+
+/* Language-specific font adjustments */
+.language-name[data-lang="ar"] {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.language-name[data-lang="ja"] {
+  font-family: "Hiragino Sans", "Noto Sans CJK JP", "Yu Gothic", sans-serif;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .global-footer-controls {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .control-group {
+    width: 100%;
+  }
+  
+  .selector-button {
+    min-width: 100%;
+  }
+  
+  .theme-switcher {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-footer-controls {
+    padding: 0.75rem;
+  }
+  
+  .control-group {
+    font-size: 0.875rem;
+  }
+  
+  .selector-button {
+    padding: 0.625rem;
+  }
+  
+  .theme-button {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* Animation enhancements */
+.dropdown-item {
+  transform: translateX(0);
+}
+
+.dropdown-item:hover {
+  transform: translateX(2px);
+}
+
+.dropdown.open .dropdown-item {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .selector-button {
+    border-width: 2px;
+  }
+  
+  .dropdown {
+    border-width: 2px;
+  }
+  
+  .control-label {
+    color: #000000;
+    font-weight: 700;
+  }
+  
+  .selector-button {
+    color: #000000;
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  [data-theme="dark"] .control-label {
+    color: #ffffff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  [data-theme="dark"] .selector-button {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .selector-button,
+  .dropdown,
+  .dropdown-item,
+  .dropdown-arrow {
+    transition: none;
+  }
+  
+  .dropdown.open .dropdown-item {
+    animation: none;
+  }
+}
+
+/* Focus indicators for keyboard navigation */
+.selector-button:focus-visible,
+.dropdown-item:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.8);
+  outline-offset: 2px;
+}
+
+/* Enhanced focus indicators for dark theme */
+[data-theme="dark"] .selector-button:focus-visible,
+[data-theme="dark"] .dropdown-item:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.9);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+}
+
+[data-theme="dark"] .theme-button:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.9);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+}
+
+/* Additional accessibility improvements */
+.selector-button:focus,
+.theme-button:focus {
+  z-index: 10;
+}

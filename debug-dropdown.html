@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Debug</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            z-index: 50;
+            width: 320px;
+            margin-top: 8px;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 8px 12px;
+            color: #374151;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f9fafb;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="p-8">
+        <h1 class="text-2xl font-bold mb-8">Dropdown Debug Test</h1>
+        
+        <div class="bg-white shadow-sm p-4 rounded-lg">
+            <div class="flex space-x-8">
+                <!-- Services Dropdown -->
+                <div class="relative">
+                    <button 
+                        class="flex items-center text-gray-700 hover:text-indigo-600 transition"
+                        onmouseenter="showDropdown('services')"
+                        onmouseleave="hideDropdown('services')"
+                    >
+                        Services
+                        <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div 
+                        id="services-dropdown" 
+                        class="dropdown-menu hidden"
+                        onmouseenter="showDropdown('services')"
+                        onmouseleave="hideDropdown('services')"
+                    >
+                        <div class="p-4">
+                            <a href="#" class="dropdown-item font-semibold text-indigo-600 mb-4">All Services →</a>
+                            <div class="space-y-2">
+                                <a href="#" class="dropdown-item">AI Consulting</a>
+                                <a href="#" class="dropdown-item">Machine Learning</a>
+                                <a href="#" class="dropdown-item">Data Engineering</a>
+                                <a href="#" class="dropdown-item">Business Intelligence</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Solutions Dropdown -->
+                <div class="relative">
+                    <button 
+                        class="flex items-center text-gray-700 hover:text-indigo-600 transition"
+                        onmouseenter="showDropdown('solutions')"
+                        onmouseleave="hideDropdown('solutions')"
+                    >
+                        Solutions
+                        <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div 
+                        id="solutions-dropdown" 
+                        class="dropdown-menu hidden"
+                        onmouseenter="showDropdown('solutions')"
+                        onmouseleave="hideDropdown('solutions')"
+                    >
+                        <div class="p-4">
+                            <a href="#" class="dropdown-item font-semibold text-indigo-600 mb-4">All Solutions →</a>
+                            <div class="space-y-2">
+                                <a href="#" class="dropdown-item">Enterprise AI</a>
+                                <a href="#" class="dropdown-item">Computer Vision</a>
+                                <a href="#" class="dropdown-item">Document Processing</a>
+                                <a href="#" class="dropdown-item">Healthcare AI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Products Dropdown -->
+                <div class="relative">
+                    <button 
+                        class="flex items-center text-gray-700 hover:text-indigo-600 transition"
+                        onmouseenter="showDropdown('products')"
+                        onmouseleave="hideDropdown('products')"
+                    >
+                        Products
+                        <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div 
+                        id="products-dropdown" 
+                        class="dropdown-menu hidden"
+                        onmouseenter="showDropdown('products')"
+                        onmouseleave="hideDropdown('products')"
+                    >
+                        <div class="p-4">
+                            <a href="#" class="dropdown-item font-semibold text-indigo-600 mb-4">All Products →</a>
+                            <div class="space-y-2">
+                                <a href="#" class="dropdown-item">
+                                    <div class="font-medium">ContextClue</div>
+                                    <div class="text-xs text-gray-500">AI-Powered Knowledge Base</div>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <div class="font-medium">RAG Evaluator</div>
+                                    <div class="text-xs text-gray-500">Evaluate Your RAG-Powered Chatbots</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let timers = {};
+        
+        function showDropdown(type) {
+            // Clear any existing timer
+            if (timers[type]) {
+                clearTimeout(timers[type]);
+                delete timers[type];
+            }
+            
+            // Show the dropdown
+            const dropdown = document.getElementById(type + '-dropdown');
+            dropdown.classList.remove('hidden');
+            
+            console.log('Showing dropdown:', type);
+        }
+        
+        function hideDropdown(type) {
+            // Set a timer to hide the dropdown
+            timers[type] = setTimeout(() => {
+                const dropdown = document.getElementById(type + '-dropdown');
+                dropdown.classList.add('hidden');
+                console.log('Hiding dropdown:', type);
+            }, 300); // 300ms delay
+        }
+        
+        // Debug: Log all mouse events
+        document.addEventListener('mouseover', function(e) {
+            if (e.target.closest('.relative')) {
+                console.log('Mouse over dropdown area:', e.target);
+            }
+        });
+        
+        document.addEventListener('mouseout', function(e) {
+            if (e.target.closest('.relative')) {
+                console.log('Mouse out of dropdown area:', e.target);
+            }
+        });
+    </script>
+</body>
+</html>

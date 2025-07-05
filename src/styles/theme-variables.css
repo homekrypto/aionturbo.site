@@ -1,0 +1,217 @@
+/* Global CSS Variables for Theme System */
+
+:root {
+  /* Light Theme (Default) */
+  --primary-bg: #ffffff;
+  --secondary-bg: #f9fafb;
+  --tertiary-bg: #f3f4f6;
+  --primary-text: #111827;
+  --secondary-text: #374151;
+  --tertiary-text: #6b7280;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  /* Gradients */
+  --hero-gradient: linear-gradient(135deg, #dbeafe 0%, #c7d2fe 100%);
+  --card-gradient: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  
+  /* Animation */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+  --primary-bg: #0f172a;
+  --secondary-bg: #1e293b;
+  --tertiary-bg: #334155;
+  --primary-text: #f8fafc;
+  --secondary-text: #e2e8f0;
+  --tertiary-text: #94a3b8;
+  --accent-color: #60a5fa;
+  --accent-hover: #3b82f6;
+  --border-color: #475569;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+  
+  /* Dark Gradients */
+  --hero-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --card-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+/* System theme respects user's OS preference */
+@media (prefers-color-scheme: dark) {
+  [data-theme="system"] {
+    --primary-bg: #0f172a;
+    --secondary-bg: #1e293b;
+    --tertiary-bg: #334155;
+    --primary-text: #f8fafc;
+    --secondary-text: #e2e8f0;
+    --tertiary-text: #94a3b8;
+    --accent-color: #60a5fa;
+    --accent-hover: #3b82f6;
+    --border-color: #475569;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --success-color: #34d399;
+    --warning-color: #fbbf24;
+    --error-color: #f87171;
+    --hero-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --card-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  }
+}
+
+/* Apply theme variables to existing elements */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Update existing utility classes to use CSS variables */
+.bg-white {
+  background-color: var(--primary-bg) !important;
+}
+
+.bg-gray-50 {
+  background-color: var(--secondary-bg) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--tertiary-bg) !important;
+}
+
+.text-gray-900 {
+  color: var(--primary-text) !important;
+}
+
+.text-gray-700 {
+  color: var(--secondary-text) !important;
+}
+
+.text-gray-600 {
+  color: var(--tertiary-text) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+/* Gradients */
+.bg-gradient-to-br.from-blue-50.to-indigo-100 {
+  background: var(--hero-gradient) !important;
+}
+
+/* Cards and shadows */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color) !important;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px var(--shadow-color) !important;
+}
+
+/* Buttons */
+.bg-blue-600 {
+  background-color: var(--accent-color) !important;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+.text-blue-600 {
+  color: var(--accent-color) !important;
+}
+
+.border-blue-600 {
+  border-color: var(--accent-color) !important;
+}
+
+/* Footer styling */
+.bg-gray-900 {
+  background-color: var(--secondary-bg) !important;
+}
+
+.text-gray-400 {
+  color: var(--tertiary-text) !important;
+}
+
+.border-gray-800 {
+  border-color: var(--border-color) !important;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-fast);
+}
+
+/* Prevent layout shift during theme changes */
+.theme-transition-disable * {
+  transition: none !important;
+}
+
+/* Focus styles for accessibility */
+.focus\:ring-2:focus {
+  --tw-ring-color: var(--accent-color);
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, var(--tertiary-bg) 25%, var(--secondary-bg) 50%, var(--tertiary-bg) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  [data-theme="dark"] {
+    --border-color: #ffffff;
+    --primary-text: #ffffff;
+    --secondary-text: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  [data-theme="dark"] {
+    --primary-bg: #ffffff;
+    --secondary-bg: #ffffff;
+    --tertiary-bg: #ffffff;
+    --primary-text: #000000;
+    --secondary-text: #000000;
+    --tertiary-text: #000000;
+  }
+}

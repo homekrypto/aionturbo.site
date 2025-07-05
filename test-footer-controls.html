@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Footer Controls Test</title>
+    <style>
+        /* Theme Variables */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-hover: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --border-color: #dee2e6;
+            --border-hover: #adb5bd;
+            --accent-color: #6366f1;
+            --accent-text: #ffffff;
+            --accent-hover: #4f46e5;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-hover: #3d3d3d;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border-color: #404040;
+            --border-hover: #606060;
+            --accent-color: #8b5cf6;
+            --accent-text: #ffffff;
+            --accent-hover: #7c3aed;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            margin-bottom: 30px;
+        }
+
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .test-text {
+            margin-bottom: 20px;
+        }
+
+        .translatable {
+            padding: 10px;
+            background: var(--bg-hover);
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Global Footer Controls Test</h1>
+        
+        <div class="test-section">
+            <h2>Theme Test</h2>
+            <p class="test-text">This text should change color based on the selected theme.</p>
+            <div class="translatable" data-translate="theme">Theme</div>
+        </div>
+
+        <div class="test-section">
+            <h2>Translation Test</h2>
+            <p class="test-text">These elements should change language:</p>
+            <div class="translatable" data-translate="language">Language</div>
+            <div class="translatable" data-translate="currency">Currency</div>
+            <div class="translatable" data-translate="light">Light</div>
+            <div class="translatable" data-translate="dark">Dark</div>
+            <div class="translatable" data-translate="system">System</div>
+        </div>
+
+        <div class="test-section">
+            <h2>Footer Controls</h2>
+            <div id="global-footer-controls-container"></div>
+        </div>
+    </div>
+
+    <!-- Include the footer controls styles -->
+    <link rel="stylesheet" href="../src/styles/global-footer-controls.css">
+    
+    <!-- Include the footer controls script -->
+    <script src="../public/js/global-footer-controls.js"></script>
+</body>
+</html>

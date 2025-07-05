@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "title": "AI on Turbo - Advanced AI Solutions for Business",
+    "description": "Transform your business with cutting-edge AI solutions. We deliver intelligent automation, advanced analytics, and innovative AI technologies that drive growth and efficiency."
+  },
+  "hero": {
+    "title": "Your Trusted AI Partner",
+    "subtitle": "Expert AI Consultancy Since 2017.",
+    "description": "Every platform business will be transformed by AI in the next 5 years. Businesses that keep control over their AI capabilities will quickly gain a competitive edge over those that subscribe to and are dependent on off-the-shelf AI providers.",
+    "cta": {
+      "consultation": "Book AI Consultation",
+      "contact": "Contact Us"
+    }
+  },
+  "featured": {
+    "title": "As featured in"
+  },
+  "platform": {
+    "title": "Your In-House Artificial Intelligence Platform",
+    "description": "Build custom AI solutions that integrate seamlessly with your existing systems and workflows."
+  },
+  "services": {
+    "title": "AI Services",
+    "subtitle": "Comprehensive AI and data solutions to transform your business operations and drive innovation.",
+    "learnMore": "Learn More",
+    "automation": {
+      "title": "Intelligent Automation",
+      "description": "Automate complex workflows and decision-making processes with AI-powered systems."
+    },
+    "analytics": {
+      "title": "Advanced Analytics",
+      "description": "Extract insights from your data with machine learning and predictive analytics."
+    },
+    "consulting": {
+      "title": "AI Strategy Consulting",
+      "description": "Develop comprehensive AI strategies aligned with your business objectives."
+    },
+    "aiConsulting": {
+      "title": "AI Consulting",
+      "description": "Strategic AI consulting to help you identify opportunities and develop AI roadmaps."
+    },
+    "bigData": {
+      "title": "Big Data Consulting",
+      "description": "Transform your data into actionable insights with our big data expertise."
+    },
+    "genAI": {
+      "title": "Generative AI Consulting",
+      "description": "Leverage the power of generative AI to create innovative solutions."
+    },
+    "businessIntelligence": {
+      "title": "Business Intelligence",
+      "description": "Make data-driven decisions with our BI solutions."
+    },
+    "dataEngineering": {
+      "title": "Data Engineering",
+      "description": "Build robust data pipelines and infrastructure."
+    },
+    "machineLearning": {
+      "title": "Machine Learning Consulting",
+      "description": "Develop custom ML models tailored to your business needs."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Let us help you identify the right AI solutions for your business.",
+      "button": "Contact Us Today"
+    }
+  },
+  "why": {
+    "title": "Why Choose AI on Turbo",
+    "description": "We combine deep technical expertise with business acumen to deliver AI solutions that drive real results.",
+    "expertise": {
+      "title": "Proven Expertise",
+      "description": "Over 7 years of experience in AI and machine learning across various industries."
+    },
+    "custom": {
+      "title": "Custom Solutions",
+      "description": "Tailored AI solutions designed specifically for your business needs and challenges."
+    },
+    "support": {
+      "title": "Ongoing Support",
+      "description": "Comprehensive support and maintenance to ensure your AI systems perform optimally."
+    }
+  },
+  "stats": {
+    "projects": "Projects Completed",
+    "satisfaction": "Client Satisfaction"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business with AI?",
+    "description": "Let us help you unlock the full potential of artificial intelligence for your organization.",
+    "contact": "Get Started Today",
+    "learn": "Learn More"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "solutions": "Solutions",
+    "about": "About",
+    "contact": "Contact",
+    "caseStudies": "Case Studies"
+  },
+  "about": {
+    "title": "About AI on Turbo",
+    "subtitle": "Your trusted AI partner since 2017. We specialize in delivering cutting-edge AI solutions that transform businesses and drive innovation.",
+    "mission": {
+      "title": "Our Mission",
+      "text1": "We believe that every platform business will be transformed by AI in the next 5 years. Our mission is to help businesses maintain control over their AI capabilities and gain a competitive edge.",
+      "text2": "Unlike businesses that depend on off-the-shelf AI providers, we empower our clients with custom AI solutions that align with their unique needs and goals."
+    },
+    "stats": {
+      "title": "Our Track Record",
+      "years": "Years of Experience",
+      "projects": "Successful Projects",
+      "clients": "Happy Clients"
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "text": "We stay at the forefront of AI technology to deliver cutting-edge solutions."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "text": "We work closely with our clients as trusted partners, not just service providers."
+      },
+      "results": {
+        "title": "Results",
+        "text": "We focus on delivering measurable results that drive real business value."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "text": "Let us help you harness the power of AI to drive growth and innovation.",
+      "button": "Get Started Today"
+    }
+  },
+  "solutions": {
+    "title": "AI Solutions",
+    "subtitle": "Industry-specific AI solutions designed to solve real-world business challenges.",
+    "learnMore": "Learn More",
+    "aiWorkforce": {
+      "title": "AI-Empowered Workforce",
+      "description": "Augment your team with AI capabilities to boost productivity and innovation."
+    },
+    "documentProcessing": {
+      "title": "AI Document Processing",
+      "description": "Automate document analysis and processing with advanced AI."
+    },
+    "knowledgeBase": {
+      "title": "AI-powered Knowledge Base",
+      "description": "Create intelligent knowledge systems that learn and adapt."
+    },
+    "computerVision": {
+      "title": "Computer Vision",
+      "description": "Extract insights from images and videos with advanced computer vision."
+    },
+    "healthcare": {
+      "title": "Healthcare AI",
+      "description": "Improve patient outcomes with AI-powered healthcare solutions."
+    },
+    "fintech": {
+      "title": "Finance & Insurance",
+      "description": "Enhance financial services with AI-driven insights and automation."
+    },
+    "industries": {
+      "title": "Industry Focus",
+      "manufacturing": "Manufacturing",
+      "retail": "Retail",
+      "aviation": "Aviation",
+      "automotive": "Automotive",
+      "logistics": "Logistics",
+      "legal": "Legal",
+      "tech": "Technology",
+      "energy": "Energy"
+    },
+    "cta": {
+      "title": "Transform Your Industry",
+      "description": "Discover how AI can revolutionize your specific industry and business model.",
+      "button": "Get Started"
+    }
+  },
+  "products": {
+    "title": "AI Products",
+    "subtitle": "Innovative AI products designed to accelerate your digital transformation and enhance productivity.",
+    "learnMore": "Learn More",
+    "contextclue": {
+      "title": "ContextClue",
+      "description": "Advanced context-aware AI system that understands and responds to complex queries with precision.",
+      "feature1": "Natural Language Processing",
+      "feature2": "Context Understanding",
+      "feature3": "Real-time Analysis"
+    },
+    "ragEvaluator": {
+      "title": "RAG Evaluator",
+      "description": "Comprehensive evaluation tool for Retrieval-Augmented Generation systems.",
+      "feature1": "Performance Metrics",
+      "feature2": "Quality Assessment",
+      "feature3": "Benchmarking Tools"
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Products?",
+      "performance": {
+        "title": "High Performance",
+        "description": "Built for scale and optimized for maximum performance in production environments."
+      },
+      "customizable": {
+        "title": "Customizable",
+        "description": "Easily adaptable to your specific business needs and requirements."
+      },
+      "secure": {
+        "title": "Enterprise Security",
+        "description": "Built with enterprise-grade security and compliance standards."
+      }
+    },
+    "cta": {
+      "title": "Ready to Try Our Products?",
+      "description": "Get started with our AI products and see the difference they can make for your business.",
+      "button": "Get Started"
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Real-world AI implementations that delivered measurable results for our clients across various industries.",
+    "readMore": "Read Case Study",
+    "carbonCredit": {
+      "title": "Carbon Credit Verification",
+      "description": "AI-powered system for automated carbon credit verification and monitoring.",
+      "industry": "Environmental",
+      "impact": "95% reduction in verification time"
+    },
+    "windTurbine": {
+      "title": "Wind Turbine Maintenance",
+      "description": "Predictive maintenance system for wind turbines using computer vision and IoT sensors.",
+      "industry": "Energy",
+      "impact": "40% reduction in maintenance costs"
+    },
+    "counterfeit": {
+      "title": "Counterfeit Detection",
+      "description": "Advanced AI system for detecting counterfeit products in retail supply chains.",
+      "industry": "Retail",
+      "impact": "99.7% detection accuracy"
+    },
+    "retailRobots": {
+      "title": "Retail Automation Robots",
+      "description": "Autonomous robots for inventory management and customer service in retail environments.",
+      "industry": "Retail",
+      "impact": "60% improvement in inventory accuracy"
+    },
+    "medicalImaging": {
+      "title": "Medical Image Analysis",
+      "description": "AI-powered medical imaging analysis for early disease detection and diagnosis.",
+      "industry": "Healthcare",
+      "impact": "85% improvement in diagnostic accuracy"
+    },
+    "fraudDetection": {
+      "title": "Financial Fraud Detection",
+      "description": "Real-time fraud detection system for financial transactions using machine learning.",
+      "industry": "Finance",
+      "impact": "70% reduction in fraud losses"
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "healthcare": "Healthcare",
+      "finance": "Finance",
+      "retail": "Retail",
+      "manufacturing": "Manufacturing",
+      "energy": "Energy",
+      "automotive": "Automotive",
+      "aviation": "Aviation",
+      "logistics": "Logistics",
+      "projects": "projects"
+    },
+    "results": {
+      "title": "Proven Results",
+      "projects": "Successful Projects",
+      "satisfaction": "Client Satisfaction",
+      "savings": "Cost Savings Generated",
+      "years": "Years of Experience"
+    },
+    "cta": {
+      "title": "Ready to Create Your Success Story?",
+      "description": "Join our growing list of satisfied clients who have transformed their businesses with AI.",
+      "button": "Start Your Project"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to transform your business with AI? Get in touch with our experts today.",
+    "form": {
+      "title": "Get in Touch",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your Company",
+      "service": "Service Interested In",
+      "selectService": "Select a service",
+      "aiConsulting": "AI Consulting",
+      "machineLearning": "Machine Learning",
+      "dataEngineering": "Data Engineering",
+      "generativeAI": "Generative AI",
+      "customSolution": "Custom Solution",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project and how we can help...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Phone"
+      },
+      "office": {
+        "title": "Office",
+        "address": "123 AI Street, Tech District, San Francisco, CA 94105"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+        "timezone": "Pacific Time Zone"
+      }
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How long does a typical AI project take?",
+      "a1": "Project timelines vary depending on complexity, but most projects range from 3-12 months. We provide detailed timelines during the consultation phase.",
+      "q2": "Do you work with startups or only large enterprises?",
+      "a2": "We work with organizations of all sizes, from startups to Fortune 500 companies. Our solutions are scalable and can be tailored to your budget and needs.",
+      "q3": "What industries do you specialize in?",
+      "a3": "We have experience across multiple industries including healthcare, finance, retail, manufacturing, and more. Our team adapts to your specific industry requirements.",
+      "q4": "How do you ensure data security and privacy?",
+      "a4": "We follow enterprise-grade security protocols and compliance standards. All data is encrypted, and we can work within your existing security frameworks."
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "products": "Products",
+    "solutions": "Solutions",
+    "caseStudies": "Case Studies",
+    "industries": "Industries",
+    "viewAll": "View All {{category}} →",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact Us",
+    "copyright": "© 2024 AI on Turbo. All rights reserved."
+  }
+}
