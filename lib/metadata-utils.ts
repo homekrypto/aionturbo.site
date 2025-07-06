@@ -1,5 +1,6 @@
+
 import { Metadata } from "next";
-import { getServerSideTranslations } from "@/lib/i18n";
+import { getTranslations } from "../src/lib/t";
 
 export async function generatePageMetadata(
   params: Promise<{ locale: string }>,
@@ -9,26 +10,11 @@ export async function generatePageMetadata(
   fallbackDescription: string
 ): Promise<Metadata> {
   const { locale } = await params;
-  const translations = await getServerSideTranslations(locale);
-  
-  const t = (key: string, fallback: string) => {
-    const keys = key.split('.');
-    let value: unknown = translations.common || translations;
-    
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
-        value = (value as Record<string, unknown>)[k];
-      } else {
-        return fallback;
-      }
-    }
-    
-    return typeof value === 'string' ? value : fallback;
-  };
+  const t = getTranslations(locale as import("../src/lib/t").Locale);
 
   return {
-    title: t(`meta.${pageKey}.title`, fallbackTitle),
-    description: t(`meta.${pageKey}.description`, fallbackDescription),
+    title: t(`meta.${pageKey}.title`) || fallbackTitle,
+    description: t(`meta.${pageKey}.description`) || fallbackDescription,
     alternates: {
       canonical: `https://ai-on-turbo.com${locale === 'en' ? path : '/' + locale + path}`,
       languages: {

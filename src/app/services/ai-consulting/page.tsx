@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { t } from "@/lib/t";
 
 export default function AIConsultingPage() {
   return (
@@ -8,18 +9,17 @@ export default function AIConsultingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 text-gray-900">
-              AI Consulting Services
+              {t("aiConsulting.hero.title")}
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Strategic guidance to transform your business with artificial intelligence. 
-              From strategy development to implementation roadmaps.
+              {t("aiConsulting.hero.description")}
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                Start Your AI Journey
+                {t("aiConsulting.hero.ctaStart")}
               </button>
               <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
-                View Case Studies
+                {t("aiConsulting.hero.ctaCaseStudies")}
               </button>
             </div>
           </div>
@@ -30,9 +30,9 @@ export default function AIConsultingPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">What We Offer</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">{t("aiConsulting.whatWeOffer.title")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI consulting services to guide your digital transformation
+              {t("aiConsulting.whatWeOffer.description")}
             </p>
           </div>
 
@@ -40,33 +40,33 @@ export default function AIConsultingPage() {
             {[
               {
                 icon: "🎯",
-                title: "AI Strategy Development",
-                description: "Create a comprehensive AI roadmap aligned with your business objectives and market opportunities."
+                title: t("aiConsulting.whatWeOffer.services.strategy"),
+                description: t("aiConsulting.whatWeOffer.services.strategyDesc")
               },
               {
                 icon: "🔍",
-                title: "AI Readiness Assessment",
-                description: "Evaluate your organization's readiness for AI adoption and identify key areas for improvement."
+                title: t("aiConsulting.whatWeOffer.services.readiness"),
+                description: t("aiConsulting.whatWeOffer.services.readinessDesc")
               },
               {
                 icon: "📊",
-                title: "Use Case Identification",
-                description: "Discover high-impact AI use cases specific to your industry and business model."
+                title: t("aiConsulting.whatWeOffer.services.useCases"),
+                description: t("aiConsulting.whatWeOffer.services.useCasesDesc")
               },
               {
                 icon: "💡",
-                title: "Technology Selection",
-                description: "Choose the right AI technologies and platforms that fit your requirements and budget."
+                title: t("aiConsulting.whatWeOffer.services.technology"),
+                description: t("aiConsulting.whatWeOffer.services.technologyDesc")
               },
               {
                 icon: "⚡",
-                title: "Implementation Planning",
-                description: "Develop detailed implementation plans with timelines, resources, and success metrics."
+                title: t("aiConsulting.whatWeOffer.services.implementation"),
+                description: t("aiConsulting.whatWeOffer.services.implementationDesc")
               },
               {
                 icon: "🔄",
-                title: "Change Management",
-                description: "Guide your organization through AI transformation with proven change management strategies."
+                title: t("aiConsulting.whatWeOffer.services.change"),
+                description: t("aiConsulting.whatWeOffer.services.changeDesc")
               }
             ].map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
@@ -83,9 +83,9 @@ export default function AIConsultingPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our AI Consulting Process</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">{t("aiConsulting.process.title")}</h2>
             <p className="text-xl text-gray-600">
-              A proven methodology to deliver successful AI transformations
+              {t("aiConsulting.process.description")}
             </p>
           </div>
 
@@ -93,26 +93,26 @@ export default function AIConsultingPage() {
             {[
               {
                 step: "01",
-                title: "Discovery & Assessment",
-                description: "Understand your business, challenges, and AI opportunities through comprehensive analysis.",
+                title: t("aiConsulting.whatWeOffer.services.strategy"),
+                description: t("aiConsulting.whatWeOffer.services.strategyDesc"),
                 color: "from-blue-500 to-blue-600"
               },
               {
                 step: "02",
-                title: "Strategy Development",
-                description: "Create a tailored AI strategy with clear objectives, timelines, and success metrics.",
+                title: t("aiConsulting.whatWeOffer.services.readiness"),
+                description: t("aiConsulting.whatWeOffer.services.readinessDesc"),
                 color: "from-indigo-500 to-indigo-600"
               },
               {
                 step: "03",
-                title: "Roadmap Creation",
-                description: "Develop a detailed implementation roadmap with prioritized initiatives and milestones.",
+                title: t("aiConsulting.whatWeOffer.services.implementation"),
+                description: t("aiConsulting.whatWeOffer.services.implementationDesc"),
                 color: "from-purple-500 to-purple-600"
               },
               {
                 step: "04",
-                title: "Implementation Support",
-                description: "Support your team through the implementation of AI solutions and change management.",
+                title: t("aiConsulting.whatWeOffer.services.change"),
+                description: t("aiConsulting.whatWeOffer.services.changeDesc"),
                 color: "from-pink-500 to-pink-600"
               }
             ].map((step, index) => (
@@ -130,27 +130,27 @@ export default function AIConsultingPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Why Choose AI on Turbo?</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">{t("aiConsulting.why.title")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Trusted by leading enterprises for our expertise, innovation, and results-driven approach.
+              {t("aiConsulting.why.description")}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: "🏆",
-                title: "Proven Track Record",
-                description: "Delivered successful AI projects for Fortune 500 companies and startups alike."
+                title: t("aiConsulting.why.trackRecord"),
+                description: t("aiConsulting.why.trackRecordDesc")
               },
               {
                 icon: "🤝",
-                title: "Client-Centric Approach",
-                description: "We partner closely with clients to ensure solutions fit their unique needs."
+                title: t("aiConsulting.why.clientCentric"),
+                description: t("aiConsulting.why.clientCentricDesc")
               },
               {
                 icon: "🚀",
-                title: "Cutting-Edge Expertise",
-                description: "Our team stays ahead of the curve with the latest AI research and technologies."
+                title: t("aiConsulting.why.expertise"),
+                description: t("aiConsulting.why.expertiseDesc")
               }
             ].map((reason, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
@@ -167,12 +167,12 @@ export default function AIConsultingPage() {
       <section className="py-20 bg-indigo-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("aiConsulting.contact.title")}</h2>
             <p className="text-xl mb-8">
-              Contact our AI consulting experts to discuss your goals and challenges.
+              {t("aiConsulting.contact.description")}
             </p>
             <Link href="/en/contact" className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-medium hover:bg-indigo-50 transition-colors">
-              Get in Touch
+              {t("aiConsulting.contact.cta")}
             </Link>
           </div>
         </div>

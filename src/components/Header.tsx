@@ -1,7 +1,9 @@
 "use client";
 
+
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { t } from "@/lib/t";
 
 export default function Header({ locale = 'en' }: { locale?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,50 +72,50 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
   }, [servicesTimer, solutionsTimer, productsTimer]);
 
   const services = [
-    { name: "AI Consulting", href: `/${locale}/services/ai-consulting` },
-    { name: "Big Data Consulting", href: `/${locale}/services/big-data-consulting` },
-    { name: "Generative AI Consulting", href: `/${locale}/services/generative-ai-consulting` },
-    { name: "Business Intelligence", href: `/${locale}/services/business-intelligence` },
-    { name: "Data Engineering", href: `/${locale}/services/data-engineering` },
-    { name: "Databricks Deployment", href: `/${locale}/services/databricks-deployment` },
-    { name: "AI Proof of Concept", href: `/${locale}/services/ai-proof-of-concept` },
-    { name: "Generative AI Development", href: `/${locale}/services/generative-ai-development` },
-    { name: "LLMs Development", href: `/${locale}/services/llms-development` },
-    { name: "Machine Learning Consulting", href: `/${locale}/services/machine-learning-consulting` },
-    { name: "AI Integration Services", href: `/${locale}/services/ai-integration` },
-    { name: "MLOps Consulting", href: `/${locale}/services/mlops-consulting` },
+    { name: t("nav.services.aiConsulting"), href: `/${locale}/services/ai-consulting` },
+    { name: t("nav.services.aiIntegration"), href: `/${locale}/services/ai-integration` },
+    { name: t("nav.services.aiProofOfConcept"), href: `/${locale}/services/ai-proof-of-concept` },
+    { name: t("nav.services.bigDataConsulting"), href: `/${locale}/services/big-data-consulting` },
+    { name: t("nav.services.businessIntelligence"), href: `/${locale}/services/business-intelligence` },
+    { name: t("nav.services.dataEngineering"), href: `/${locale}/services/data-engineering` },
+    { name: t("nav.services.databricksDeployment"), href: `/${locale}/services/databricks-deployment` },
+    { name: t("nav.services.generativeAiConsulting"), href: `/${locale}/services/generative-ai-consulting` },
+    { name: t("nav.services.generativeAiDevelopment"), href: `/${locale}/services/generative-ai-development` },
+    { name: t("nav.services.llmsDevelopment"), href: `/${locale}/services/llms-development` },
+    { name: t("nav.services.machineLearningConsulting"), href: `/${locale}/services/machine-learning-consulting` },
+    { name: t("nav.services.mlopsConsulting"), href: `/${locale}/services/mlops-consulting` },
   ];
 
   const solutions = [
-    { name: "AI-Empowered Workforce", href: `/${locale}/solutions/ai-empowered-workforce` },
-    { name: "Global AI Workforce", href: `/${locale}/solutions/ai-global-workforce` },
-    { name: "AI Document Processing", href: `/${locale}/solutions/ai-document-processing` },
-    { name: "AI-powered Knowledge Base", href: `/${locale}/solutions/ai-knowledge-base` },
-    { name: "Enterprise Generative AI", href: `/${locale}/solutions/enterprise-generative-ai` },
-    { name: "LLM-Based Solutions", href: `/${locale}/solutions/llm-solutions` },
-    { name: "Computer Vision", href: `/${locale}/solutions/computer-vision` },
-    { name: "Healthcare", href: `/${locale}/solutions/healthcare` },
-    { name: "Aviation", href: `/${locale}/solutions/aviation` },
-    { name: "Manufacturing", href: `/${locale}/solutions/manufacturing` },
-    { name: "Private Investments", href: `/${locale}/solutions/private-investments` },
-    { name: "Technology Companies", href: `/${locale}/solutions/technology-companies` },
-    { name: "Finance & Insurance", href: `/${locale}/solutions/finance-insurance` },
-    { name: "Retail", href: `/${locale}/solutions/retail` },
-    { name: "Legal", href: `/${locale}/solutions/legal` },
-    { name: "Logistics", href: `/${locale}/solutions/logistics` },
-    { name: "Automotive", href: `/${locale}/solutions/automotive` },
+    { name: t("nav.solutions.aiEmpoweredWorkforce"), href: `/${locale}/solutions/ai-empowered-workforce` },
+    { name: t("nav.solutions.globalAiWorkforce"), href: `/${locale}/solutions/ai-global-workforce` },
+    { name: t("nav.solutions.aiDocumentProcessing"), href: `/${locale}/solutions/ai-document-processing` },
+    { name: t("nav.solutions.aiKnowledgeBase"), href: `/${locale}/solutions/ai-knowledge-base` },
+    { name: t("nav.solutions.automotive"), href: `/${locale}/solutions/automotive` },
+    { name: t("nav.solutions.aviation"), href: `/${locale}/solutions/aviation` },
+    { name: t("nav.solutions.computerVision"), href: `/${locale}/solutions/computer-vision` },
+    { name: t("nav.solutions.enterpriseGenerativeAi"), href: `/${locale}/solutions/enterprise-generative-ai` },
+    { name: t("nav.solutions.financeInsurance"), href: `/${locale}/solutions/finance-insurance` },
+    { name: t("nav.solutions.healthcare"), href: `/${locale}/solutions/healthcare` },
+    { name: t("nav.solutions.legal"), href: `/${locale}/solutions/legal` },
+    { name: t("nav.solutions.llmSolutions"), href: `/${locale}/solutions/llm-solutions` },
+    { name: t("nav.solutions.logistics"), href: `/${locale}/solutions/logistics` },
+    { name: t("nav.solutions.manufacturing"), href: `/${locale}/solutions/manufacturing` },
+    { name: t("nav.solutions.privateInvestments"), href: `/${locale}/solutions/private-investments` },
+    { name: t("nav.solutions.retail"), href: `/${locale}/solutions/retail` },
+    { name: t("nav.solutions.technologyCompanies"), href: `/${locale}/solutions/technology-companies` },
   ];
 
   const products = [
     { 
-      name: "ContextClue", 
+      name: t("nav.products.contextclue"), 
       href: `/${locale}/products/contextclue`,
-      description: "AI-Powered Knowledge Base Assistant"
+      description: t("nav.products.contextclueDesc")
     },
     { 
-      name: "RAG Evaluator", 
+      name: t("nav.products.ragEvaluator"), 
       href: `/${locale}/products/rag-evaluator`,
-      description: "Evaluate Your RAG-Powered Chatbots"
+      description: t("nav.products.ragEvaluatorDesc")
     }
   ];
 
@@ -132,9 +134,8 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link href={`/${locale}`} className="text-gray-700 hover:text-indigo-600 transition">
-              Home
+              {t("nav.home")}
             </Link>
-            
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -142,15 +143,13 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 onMouseEnter={handleServicesEnter}
                 onMouseLeave={handleServicesLeave}
               >
-                Services
+                {t("nav.services.title")}
                 <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {/* Invisible bridge to prevent dropdown from closing */}
               <div className="absolute top-full left-0 w-full h-2 bg-transparent"></div>
-              
               {isServicesOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border z-50 transition-all duration-200"
@@ -163,12 +162,12 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                       className="block text-lg font-semibold text-indigo-600 mb-4 hover:text-indigo-800"
                       onClick={() => setIsServicesOpen(false)}
                     >
-                      All Services →
+                      {t("nav.services.all")}
                     </Link>
                     <div className="grid grid-cols-1 gap-2">
                       {services.map((service) => (
                         <Link
-                          key={service.name}
+                          key={service.href}
                           href={service.href}
                           className="block px-3 py-2 text-sm text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded transition"
                           onClick={() => setIsServicesOpen(false)}
@@ -181,7 +180,6 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 </div>
               )}
             </div>
-
             {/* Solutions Dropdown */}
             <div className="relative group">
               <button
@@ -189,15 +187,13 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 onMouseEnter={handleSolutionsEnter}
                 onMouseLeave={handleSolutionsLeave}
               >
-                Solutions
+                {t("nav.solutions.title")}
                 <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {/* Invisible bridge to prevent dropdown from closing */}
               <div className="absolute top-full left-0 w-full h-2 bg-transparent"></div>
-              
               {isSolutionsOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border z-50 transition-all duration-200"
@@ -210,12 +206,12 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                       className="block text-lg font-semibold text-indigo-600 mb-4 hover:text-indigo-800"
                       onClick={() => setIsSolutionsOpen(false)}
                     >
-                      All Solutions →
+                      {t("nav.solutions.all")}
                     </Link>
                     <div className="grid grid-cols-1 gap-2">
                       {solutions.map((solution) => (
                         <Link
-                          key={solution.name}
+                          key={solution.href}
                           href={solution.href}
                           className="block px-3 py-2 text-sm text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded transition"
                           onClick={() => setIsSolutionsOpen(false)}
@@ -228,7 +224,6 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 </div>
               )}
             </div>
-
             {/* Products Dropdown */}
             <div className="relative group">
               <button
@@ -236,15 +231,13 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 onMouseEnter={handleProductsEnter}
                 onMouseLeave={handleProductsLeave}
               >
-                Products
+                {t("nav.products.title")}
                 <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {/* Invisible bridge to prevent dropdown from closing */}
               <div className="absolute top-full left-0 w-full h-2 bg-transparent"></div>
-              
               {isProductsOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border z-50 transition-all duration-200"
@@ -257,12 +250,12 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                       className="block text-lg font-semibold text-indigo-600 mb-4 hover:text-indigo-800"
                       onClick={() => setIsProductsOpen(false)}
                     >
-                      All Products →
+                      {t("nav.products.all")}
                     </Link>
                     <div className="grid grid-cols-1 gap-2">
                       {products.map((product) => (
                         <Link
-                          key={product.name}
+                          key={product.href}
                           href={product.href}
                           className="block px-3 py-2 text-sm hover:bg-gray-50 rounded transition"
                           onClick={() => setIsProductsOpen(false)}
@@ -276,26 +269,20 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 </div>
               )}
             </div>
-
             <Link href={`/${locale}/about`} className="text-gray-700 hover:text-indigo-600 transition">
-              About
+              {t("nav.about")}
             </Link>
             <Link href={`/${locale}/case-studies`} className="text-gray-700 hover:text-indigo-600 transition">
-              Case Studies
+              {t("nav.caseStudies")}
             </Link>
             <Link href={`/${locale}/contact`} className="text-gray-700 hover:text-indigo-600 transition">
-              Contact
+              {t("nav.contact")}
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              href={`/${locale}/contact`}
-              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
-            >
-              Get Started
-            </Link>
+          {/* Language/Theme Switcher (moved from footer) */}
+          <div className="hidden lg:block ml-4">
+            <div id="global-footer-controls-container"></div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -314,18 +301,17 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
           <div className="lg:hidden bg-white border-t">
             <div className="px-4 py-2 space-y-1">
               <Link href={`/${locale}`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition">
-                Home
+                {t("nav.home")}
               </Link>
-              
               {/* Mobile Services Section */}
               <div className="space-y-1">
                 <Link href={`/${locale}/services`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition font-medium">
-                  Services
+                  {t("nav.services.title")}
                 </Link>
                 <div className="pl-6 space-y-1">
                   {services.map((service) => (
                     <Link
-                      key={service.name}
+                      key={service.href}
                       href={service.href}
                       className="block px-3 py-1 text-sm text-gray-600 hover:text-indigo-600 transition"
                     >
@@ -334,16 +320,15 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                   ))}
                 </div>
               </div>
-
               {/* Mobile Solutions Section */}
               <div className="space-y-1">
                 <Link href={`/${locale}/solutions`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition font-medium">
-                  Solutions
+                  {t("nav.solutions.title")}
                 </Link>
                 <div className="pl-6 space-y-1">
                   {solutions.map((solution) => (
                     <Link
-                      key={solution.name}
+                      key={solution.href}
                       href={solution.href}
                       className="block px-3 py-1 text-sm text-gray-600 hover:text-indigo-600 transition"
                     >
@@ -352,16 +337,15 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                   ))}
                 </div>
               </div>
-
               {/* Mobile Products Section */}
               <div className="space-y-1">
                 <Link href={`/${locale}/products`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition font-medium">
-                  Products
+                  {t("nav.products.title")}
                 </Link>
                 <div className="pl-6 space-y-1">
                   {products.map((product) => (
                     <Link
-                      key={product.name}
+                      key={product.href}
                       href={product.href}
                       className="block px-3 py-1 text-sm text-gray-600 hover:text-indigo-600 transition"
                     >
@@ -370,25 +354,19 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                   ))}
                 </div>
               </div>
-
               <Link href={`/${locale}/about`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition">
-                About
+                {t("nav.about")}
               </Link>
               <Link href={`/${locale}/case-studies`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition">
-                Case Studies
+                {t("nav.caseStudies")}
               </Link>
               <Link href={`/${locale}/contact`} className="block px-3 py-2 text-gray-700 hover:text-indigo-600 transition">
-                Contact
+                {t("nav.contact")}
               </Link>
-              
-              {/* Mobile CTA Button */}
+
+              {/* Language/Theme Switcher (mobile) */}
               <div className="pt-4 pb-2">
-                <Link
-                  href={`/${locale}/contact`}
-                  className="block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition text-center"
-                >
-                  Get Started
-                </Link>
+                <div id="global-footer-controls-container-mobile"></div>
               </div>
             </div>
           </div>

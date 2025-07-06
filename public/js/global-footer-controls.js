@@ -80,7 +80,7 @@ class GlobalFooterControls {
           <div class="language-selector selector-container">
             <button class="selector-button" onclick="globalFooterControls.toggleLanguageDropdown()">
               <span class="language-name">${currentLang ? currentLang.nativeName : 'English'}</span>
-              <span class="dropdown-arrow">▲</span>
+              <span class="dropdown-arrow">▼</span>
             </button>
             <div class="dropdown">
               ${this.languages.map(lang => `

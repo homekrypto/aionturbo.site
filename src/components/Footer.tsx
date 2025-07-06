@@ -1,39 +1,44 @@
 import Link from "next/link";
+import { t, Locale } from "@/lib/t";
 
 export default function Footer({ locale = 'en' }: { locale?: string }) {
+  // Always use the current locale for translations, so the footer updates when the language changes
+  const effectiveLocale = (locale || 'en') as Locale;
   const services = [
-    { name: "AI Consulting", href: `/${locale}/services/ai-consulting` },
-    { name: "Big Data Consulting", href: `/${locale}/services/big-data-consulting` },
-    { name: "Generative AI Consulting", href: `/${locale}/services/generative-ai-consulting` },
-    { name: "Business Intelligence", href: `/${locale}/services/business-intelligence` },
-    { name: "Data Engineering", href: `/${locale}/services/data-engineering` },
-    { name: "Machine Learning Consulting", href: `/${locale}/services/machine-learning-consulting` },
+    { name: t("footer.services.aiConsulting", effectiveLocale), href: `/${effectiveLocale}/services/ai-consulting` },
+    { name: t("footer.services.bigDataConsulting", effectiveLocale), href: `/${effectiveLocale}/services/big-data-consulting` },
+    { name: t("footer.services.generativeAiConsulting", effectiveLocale), href: `/${effectiveLocale}/services/generative-ai-consulting` },
+    { name: t("footer.services.businessIntelligence", effectiveLocale), href: `/${effectiveLocale}/services/business-intelligence` },
+    { name: t("footer.services.dataEngineering", effectiveLocale), href: `/${effectiveLocale}/services/data-engineering` },
+    { name: t("footer.services.machineLearningConsulting", effectiveLocale), href: `/${effectiveLocale}/services/machine-learning-consulting` },
   ];
 
   const solutions = [
-    { name: "AI-Empowered Workforce", href: `/${locale}/solutions/ai-empowered-workforce` },
-    { name: "Global AI Workforce", href: `/${locale}/solutions/ai-global-workforce` },
-    { name: "AI Document Processing", href: `/${locale}/solutions/ai-document-processing` },
-    { name: "Enterprise Generative AI", href: `/${locale}/solutions/enterprise-generative-ai` },
-    { name: "Computer Vision", href: `/${locale}/solutions/computer-vision` },
-    { name: "Healthcare", href: `/${locale}/solutions/healthcare` },
-    { name: "Finance & Insurance", href: `/${locale}/solutions/finance-insurance` },
-    { name: "Manufacturing", href: `/${locale}/solutions/manufacturing` },
+    { name: t("footer.solutions.aiEmpoweredWorkforce", effectiveLocale), href: `/${effectiveLocale}/solutions/ai-empowered-workforce` },
+    { name: t("footer.solutions.globalAiWorkforce", effectiveLocale), href: `/${effectiveLocale}/solutions/ai-global-workforce` },
+    { name: t("footer.solutions.aiDocumentProcessing", effectiveLocale), href: `/${effectiveLocale}/solutions/ai-document-processing` },
+    { name: t("footer.solutions.enterpriseGenerativeAi", effectiveLocale), href: `/${effectiveLocale}/solutions/enterprise-generative-ai` },
+    { name: t("footer.solutions.computerVision", effectiveLocale), href: `/${effectiveLocale}/solutions/computer-vision` },
+    { name: t("footer.solutions.healthcare", effectiveLocale), href: `/${effectiveLocale}/solutions/healthcare` },
+    { name: t("footer.solutions.financeInsurance", effectiveLocale), href: `/${effectiveLocale}/solutions/finance-insurance` },
+    { name: t("footer.solutions.manufacturing", effectiveLocale), href: `/${effectiveLocale}/solutions/manufacturing` },
   ];
 
   const industries = [
-    { name: "Aviation", href: `/${locale}/solutions/aviation` },
-    { name: "Automotive", href: `/${locale}/solutions/automotive` },
-    { name: "Retail", href: `/${locale}/solutions/retail` },
-    { name: "Legal", href: `/${locale}/solutions/legal` },
-    { name: "Logistics", href: `/${locale}/solutions/logistics` },
-    { name: "Technology Companies", href: `/${locale}/solutions/technology-companies` },
+    { name: t("footer.industries.aviation", effectiveLocale), href: `/${effectiveLocale}/solutions/aviation` },
+    { name: t("footer.industries.automotive", effectiveLocale), href: `/${effectiveLocale}/solutions/automotive` },
+    { name: t("footer.industries.retail", effectiveLocale), href: `/${effectiveLocale}/solutions/retail` },
+    { name: t("footer.industries.legal", effectiveLocale), href: `/${effectiveLocale}/solutions/legal` },
+    { name: t("footer.industries.logistics", effectiveLocale), href: `/${effectiveLocale}/solutions/logistics` },
+    { name: t("footer.industries.technologyCompanies", effectiveLocale), href: `/${effectiveLocale}/solutions/technology-companies` },
   ];
 
   const products = [
-    { name: "ContextClue", href: `/${locale}/products/contextclue` },
-    { name: "RAG Evaluator", href: `/${locale}/products/rag-evaluator` },
+    { name: t("footer.products.contextClue", effectiveLocale), href: `/${effectiveLocale}/products/contextclue` },
+    { name: t("footer.products.ragEvaluator", effectiveLocale), href: `/${effectiveLocale}/products/rag-evaluator` },
   ];
+
+  // ...existing code (JSX and return statement, unchanged)...
 
   return (
     <footer className="bg-white text-black">
@@ -42,12 +47,11 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
           
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href={`/${locale}`} className="text-2xl font-bold text-indigo-600 mb-4 block">
-              AI on Turbo
+            <Link href={`/${effectiveLocale}`} className="text-2xl font-bold text-indigo-600 mb-4 block">
+              {t("footer.companyName", effectiveLocale)}
             </Link>
             <p className="text-gray-700 mb-6 max-w-md">
-              Transforming businesses with cutting-edge AI solutions. We deliver intelligent automation, 
-              advanced analytics, and innovative AI technologies that drive growth and efficiency.
+              {t("footer.companyDescription", effectiveLocale)}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-600 hover:text-indigo-600 transition">
@@ -70,18 +74,18 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.services", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link href={service.href} className="text-gray-700 hover:text-indigo-600 transition">
-                    {service.name}
+                  {service.name}
                   </Link>
                 </li>
               ))}
               <li>
                 <Link href={`/${locale}/services`} className="text-indigo-600 hover:text-indigo-500 transition">
-                  View All Services →
+                  {t("footer.viewAllServices")}
                 </Link>
               </li>
             </ul>
@@ -89,18 +93,18 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">Products</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.products", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product.name}>
                   <Link href={product.href} className="text-gray-700 hover:text-indigo-600 transition">
-                    {product.name}
+                  {product.name}
                   </Link>
                 </li>
               ))}
               <li>
                 <Link href={`/${locale}/products`} className="text-indigo-600 hover:text-indigo-500 transition">
-                  View All Products →
+                  {t("footer.viewAllProducts")}
                 </Link>
               </li>
             </ul>
@@ -108,18 +112,18 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">Solutions</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.solutions", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {solutions.map((solution) => (
                 <li key={solution.name}>
                   <Link href={solution.href} className="text-gray-700 hover:text-indigo-600 transition">
-                    {solution.name}
+                  {solution.name}
                   </Link>
                 </li>
               ))}
               <li>
                 <Link href={`/${locale}/solutions`} className="text-indigo-600 hover:text-indigo-500 transition">
-                  View All Solutions →
+                  {t("footer.viewAllSolutions")}
                 </Link>
               </li>
             </ul>
@@ -127,31 +131,31 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Case Studies */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">Case Studies</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.caseStudies", effectiveLocale)}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href={`/${locale}/case-studies/carbon-credit-verification`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Carbon Credit AI
+                  {t("footer.caseStudies.carbonCreditAi")}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/case-studies/wind-turbine-maintenance`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Wind Turbine AI
+                  {t("footer.caseStudies.windTurbineAi")}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/case-studies/counterfeit-detection`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Counterfeit Detection
+                  {t("footer.caseStudies.counterfeitDetection")}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/case-studies/retail-robots`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Retail Automation
+                  {t("footer.caseStudies.retailAutomation")}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/case-studies`} className="text-indigo-600 hover:text-indigo-500 transition">
-                  View All Case Studies →
+                  {t("footer.viewAllCaseStudies")}
                 </Link>
               </li>
             </ul>
@@ -159,18 +163,18 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Industries */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">Industries</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.industries", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {industries.map((industry) => (
                 <li key={industry.name}>
                   <Link href={industry.href} className="text-gray-700 hover:text-indigo-600 transition">
-                    {industry.name}
+                  {industry.name}
                   </Link>
                 </li>
               ))}
               <li>
                 <Link href={`/${locale}/solutions`} className="text-indigo-600 hover:text-indigo-500 transition">
-                  View All Industries →
+                  {t("footer.viewAllIndustries")}
                 </Link>
               </li>
             </ul>
@@ -178,26 +182,26 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.company", effectiveLocale)}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href={`/${locale}/about`} className="text-gray-700 hover:text-indigo-600 transition">
-                  About Us
+                  {t("footer.company.about", effectiveLocale)}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/case-studies`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Case Studies
+                  {t("footer.company.caseStudies", effectiveLocale)}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/contact`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Contact
+                  {t("footer.company.contact", effectiveLocale)}
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/services`} className="text-gray-700 hover:text-indigo-600 transition">
-                  Careers
+                  {t("footer.company.careers", effectiveLocale)}
                 </Link>
               </li>
             </ul>
@@ -206,23 +210,24 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-300 mt-12 pt-8">
-          {/* Global Footer Controls */}
-          <div id="global-footer-controls-container" className="mb-8"></div>
+
+          {/* Global Footer Controls moved to Header */}
+          {/* <div id="global-footer-controls-container" className="mb-8"></div> */}
           
           <div className="md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
-              <Link href={`/${locale}/privacy`} className="text-gray-600 hover:text-indigo-600 transition" data-translate="privacy-policy">
-                Privacy Policy
+              <Link href={`/${effectiveLocale}/privacy`} className="text-gray-600 hover:text-indigo-600 transition" data-translate="privacy-policy">
+                {t("footer.privacyPolicy", effectiveLocale)}
               </Link>
-              <Link href={`/${locale}/terms`} className="text-gray-600 hover:text-indigo-600 transition" data-translate="terms-of-service">
-                Terms of Service
+              <Link href={`/${effectiveLocale}/terms`} className="text-gray-600 hover:text-indigo-600 transition" data-translate="terms-of-service">
+                {t("footer.termsOfService", effectiveLocale)}
               </Link>
-              <Link href={`/${locale}/contact`} className="text-gray-600 hover:text-indigo-600 transition" data-translate="contact">
-                Contact Us
+              <Link href={`/${effectiveLocale}/contact`} className="text-gray-600 hover:text-indigo-600 transition" data-translate="contact">
+                {t("footer.contactUs", effectiveLocale)}
               </Link>
             </div>
             <p className="mt-8 md:mt-0 md:order-1 text-gray-600" data-translate="copyright">
-              © 2024 AI on Turbo. All rights reserved.
+              {t("footer.copyright", effectiveLocale)}
             </p>
           </div>
         </div>

@@ -1,25 +1,22 @@
 const supportedLanguages = ['en', 'es', 'fr', 'de', 'pl', 'pt', 'ar', 'tr', 'ja'];
 
-export const getServerSideTranslations = async (locale: string, namespaces: string[] = ['common']) => {
-  const resources: Record<string, unknown> = {};
-  
-  for (const ns of namespaces) {
+
+export const getServerSideTranslations = async (locale: string) => {
+  // Ignore namespaces, just load the flat JSON from /locales/{locale}.json
+  try {
+    const translations = await import(`../locales/${locale}.json`);
+    return translations.default;
+  } catch {
+    console.warn(`Failed to load translations for ${locale}`);
+    // Fallback to English
     try {
-      const translations = await import(`../public/locales/${locale}/${ns}.json`);
-      resources[ns] = translations.default;
+      const fallbackTranslations = await import(`../locales/en.json`);
+      return fallbackTranslations.default;
     } catch {
-      console.warn(`Failed to load translations for ${locale}/${ns}`);
-      // Fallback to English
-      try {
-        const fallbackTranslations = await import(`../public/locales/en/${ns}.json`);
-        resources[ns] = fallbackTranslations.default;
-      } catch {
-        console.error(`Failed to load fallback translations for ${ns}`);
-      }
+      console.error(`Failed to load fallback translations for en`);
+      return {};
     }
   }
-  
-  return resources;
 };
 
 export const createTranslationFunction = (translations: unknown) => {

@@ -1,94 +1,96 @@
+
 import Link from "next/link";
+import { t } from "@/lib/t";
 
 export default function ServicesPage() {
   const services = [
     {
-      category: "Discover",
+      category: t("servicesPage.discover.category"),
       services: [
         {
-          title: "AI Consulting",
-          description: "Strategic guidance on AI implementation and business transformation",
+          title: t("servicesPage.discover.aiConsulting.title"),
+          description: t("servicesPage.discover.aiConsulting.description"),
           href: "/services/ai-consulting",
           icon: "🧠"
         },
         {
-          title: "Big Data Consulting",
-          description: "Unlock the value of your data with comprehensive big data strategies",
+          title: t("servicesPage.discover.bigDataConsulting.title"),
+          description: t("servicesPage.discover.bigDataConsulting.description"),
           href: "/services/big-data-consulting",
           icon: "📊"
         },
         {
-          title: "Generative AI Consulting",
-          description: "Harness the power of generative AI for content creation and automation",
+          title: t("servicesPage.discover.generativeAIConsulting.title"),
+          description: t("servicesPage.discover.generativeAIConsulting.description"),
           href: "/services/generative-ai-consulting",
           icon: "🎨"
         }
       ]
     },
     {
-      category: "Organize Data",
+      category: t("servicesPage.organizeData.category"),
       services: [
         {
-          title: "Business Intelligence Services",
-          description: "Transform raw data into actionable business insights",
+          title: t("servicesPage.organizeData.businessIntelligence.title"),
+          description: t("servicesPage.organizeData.businessIntelligence.description"),
           href: "/services/business-intelligence",
           icon: "📈"
         },
         {
-          title: "Data Engineering Services",
-          description: "Build robust data pipelines and infrastructure",
+          title: t("servicesPage.organizeData.dataEngineering.title"),
+          description: t("servicesPage.organizeData.dataEngineering.description"),
           href: "/services/data-engineering",
           icon: "⚙️"
         },
         {
-          title: "Databricks Deployment Services",
-          description: "Expert deployment and optimization of Databricks platforms",
+          title: t("servicesPage.organizeData.databricksDeployment.title"),
+          description: t("servicesPage.organizeData.databricksDeployment.description"),
           href: "/services/databricks-deployment",
           icon: "🏗️"
         }
       ]
     },
     {
-      category: "Develop",
+      category: t("servicesPage.develop.category"),
       services: [
         {
-          title: "AI Proof of Concept (PoC)",
-          description: "Validate your AI ideas with rapid prototyping and testing",
+          title: t("servicesPage.develop.aiPoc.title"),
+          description: t("servicesPage.develop.aiPoc.description"),
           href: "/services/ai-proof-of-concept",
           icon: "🔬"
         },
         {
-          title: "Generative AI Development",
-          description: "Build custom generative AI solutions for your business needs",
+          title: t("servicesPage.develop.generativeAIDevelopment.title"),
+          description: t("servicesPage.develop.generativeAIDevelopment.description"),
           href: "/services/generative-ai-development",
           icon: "🚀"
         },
         {
-          title: "LLMs Development",
-          description: "Create and fine-tune large language models for specific use cases",
+          title: t("servicesPage.develop.llmsDevelopment.title"),
+          description: t("servicesPage.develop.llmsDevelopment.description"),
           href: "/services/llms-development",
           icon: "🤖"
         },
         {
-          title: "Machine Learning Consulting",
-          description: "End-to-end ML solutions from concept to production",
+          title: t("servicesPage.develop.mlConsulting.title"),
+          description: t("servicesPage.develop.mlConsulting.description"),
           href: "/services/machine-learning-consulting",
           icon: "🎯"
         }
       ]
     },
     {
-      category: "Deploy",
+      category: t("servicesPage.deploy.category"),
       services: [
         {
-          title: "AI Integration Services",
-          description: "Seamlessly integrate AI solutions into your existing systems",
+          title: t("servicesPage.deploy.aiIntegration.title"),
+          description: t("servicesPage.deploy.aiIntegration.description"),
           href: "/services/ai-integration",
           icon: "🔗"
         },
         {
-          title: "MLOps Consulting",
-          description: "Streamline your ML operations with best practices and automation",
+          title: t("servicesPage.deploy.mlopsConsulting.title"),
+          description: t("servicesPage.deploy.mlopsConsulting.description"),
           href: "/services/mlops-consulting",
           icon: "🔄"
         }
@@ -102,16 +104,16 @@ export default function ServicesPage() {
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-blue-600 logo-pulse">
-            AI on Turbo
+            {t("site.title")}
           </Link>
           <nav className="hidden md:flex space-x-8">
-            <Link href="/#services" className="hover:text-blue-600 transition-colors">Services</Link>
-            <Link href="/#about" className="hover:text-blue-600 transition-colors">About</Link>
-            <Link href="/#testimonials" className="hover:text-blue-600 transition-colors">Testimonials</Link>
-            <Link href="/#contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+            <Link href="/#services" className="hover:text-blue-600 transition-colors">{t("nav.services")}</Link>
+            <Link href="/#about" className="hover:text-blue-600 transition-colors">{t("nav.about")}</Link>
+            <Link href="/#testimonials" className="hover:text-blue-600 transition-colors">{t("nav.testimonials")}</Link>
+            <Link href="/#contact" className="hover:text-blue-600 transition-colors">{t("nav.contact")}</Link>
           </nav>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors btn-animate">
-            Book Consultation
+            {t("servicesPage.cta.bookConsultation")}
           </button>
         </div>
       </header>
@@ -120,10 +122,10 @@ export default function ServicesPage() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6 text-gray-900">
-            Our AI Services
+            {t("servicesPage.hero.title")}
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            From discovery to deployment, we offer comprehensive AI solutions to transform your business
+            {t("servicesPage.hero.description")}
           </p>
         </div>
       </section>
@@ -136,7 +138,6 @@ export default function ServicesPage() {
               <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
                 {category.category}
               </h2>
-              
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <Link 
@@ -154,7 +155,7 @@ export default function ServicesPage() {
                       {service.description}
                     </p>
                     <span className="text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
-                      Learn More →
+                      {t("servicesPage.learnMore")}
                     </span>
                   </Link>
                 ))}
@@ -168,58 +169,19 @@ export default function ServicesPage() {
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Business with AI?
+            {t("servicesPage.cta.title")}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's discuss how our AI services can drive your business forward
+            {t("servicesPage.cta.description")}
           </p>
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg">
-            Get Started Today
+            {t("servicesPage.cta.getStarted")}
           </button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-bold mb-4">AI on Turbo</div>
-              <p className="text-gray-400">Your trusted AI partner for business transformation.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="/services/ai-consulting" className="hover:text-white transition-colors">AI Consulting</Link></li>
-                <li><Link href="/services/machine-learning-consulting" className="hover:text-white transition-colors">Machine Learning</Link></li>
-                <li><Link href="/services/data-engineering" className="hover:text-white transition-colors">Data Engineering</Link></li>
-                <li><Link href="/services/mlops-consulting" className="hover:text-white transition-colors">MLOps</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Team</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>contact@ai-on-turbo.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li><Link href="#" className="hover:text-white transition-colors">LinkedIn</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Twitter</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 AI on Turbo. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      {/* ...existing code for footer, should be refactored to use <Footer /> component and translation keys in the future ... */}
     </div>
   );
 }

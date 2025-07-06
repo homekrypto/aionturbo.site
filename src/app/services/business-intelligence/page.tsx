@@ -1,4 +1,7 @@
+
+
 import Link from "next/link";
+import { t } from "@/lib/t";
 
 export default function BusinessIntelligencePage() {
   return (
@@ -8,10 +11,10 @@ export default function BusinessIntelligencePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Business Intelligence Services
+              {t("bi.hero.title")}
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Transform raw data into actionable business insights with our comprehensive BI solutions
+              {t("bi.hero.description")}
             </p>
           </div>
         </div>
@@ -21,34 +24,34 @@ export default function BusinessIntelligencePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Overview */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Unlock the Power of Your Data</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t("bi.overview.title")}</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-gray-600 mb-6">
-                Our Business Intelligence services help organizations make data-driven decisions by transforming complex datasets into clear, actionable insights. We create comprehensive BI strategies that align with your business objectives.
+                {t("bi.overview.p1")}
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                From data visualization and reporting to predictive analytics and performance dashboards, we provide end-to-end BI solutions that empower your team to make informed decisions quickly and confidently.
+                {t("bi.overview.p2")}
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.overview.benefits.title")}</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Real-time data visualization and reporting</span>
+                  <span>{t("bi.overview.benefits.realtime")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Improved decision-making speed</span>
+                  <span>{t("bi.overview.benefits.speed")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Enhanced operational efficiency</span>
+                  <span>{t("bi.overview.benefits.efficiency")}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Cost reduction through data insights</span>
+                  <span>{t("bi.overview.benefits.cost")}</span>
                 </li>
               </ul>
             </div>
@@ -57,48 +60,48 @@ export default function BusinessIntelligencePage() {
 
         {/* Services */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our BI Services</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("bi.services.title")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
               <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-4">Data Visualization</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.services.dataViz.title")}</h3>
               <p className="text-gray-600">
-                Create compelling dashboards and interactive visualizations that make complex data easy to understand and act upon.
+                {t("bi.services.dataViz.desc")}
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
               <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-4">Performance Analytics</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.services.performance.title")}</h3>
               <p className="text-gray-600">
-                Track KPIs and business metrics with automated reporting and real-time performance monitoring systems.
+                {t("bi.services.performance.desc")}
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
               <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-4">Predictive Analytics</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.services.predictive.title")}</h3>
               <p className="text-gray-600">
-                Leverage historical data to forecast trends, identify opportunities, and predict future business outcomes.
+                {t("bi.services.predictive.desc")}
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-4">Real-time Reporting</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.services.realtime.title")}</h3>
               <p className="text-gray-600">
-                Get instant access to critical business metrics with automated reports and real-time data streaming.
+                {t("bi.services.realtime.desc")}
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
               <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-4">Custom Dashboards</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.services.customDashboards.title")}</h3>
               <p className="text-gray-600">
-                Build tailored dashboards that display the most relevant metrics for different stakeholders and departments.
+                {t("bi.services.customDashboards.desc")}
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
               <div className="text-4xl mb-4">📋</div>
-              <h3 className="text-xl font-semibold mb-4">Executive Reporting</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("bi.services.executive.title")}</h3>
               <p className="text-gray-600">
-                Deliver high-level insights to leadership with executive summaries and strategic performance reports.
+                {t("bi.services.executive.desc")}
               </p>
             </div>
           </div>
@@ -106,71 +109,71 @@ export default function BusinessIntelligencePage() {
 
         {/* Process */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our BI Implementation Process</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("bi.process.title")}</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Assessment</h3>
-              <p className="text-gray-600">Analyze your current data landscape and business requirements</p>
+              <h3 className="text-lg font-semibold mb-2">{t("bi.process.assessment.title")}</h3>
+              <p className="text-gray-600">{t("bi.process.assessment.desc")}</p>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">2</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Strategy</h3>
-              <p className="text-gray-600">Design a comprehensive BI strategy aligned with your goals</p>
+              <h3 className="text-lg font-semibold mb-2">{t("bi.process.strategy.title")}</h3>
+              <p className="text-gray-600">{t("bi.process.strategy.desc")}</p>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">3</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Implementation</h3>
-              <p className="text-gray-600">Build and deploy BI solutions using industry best practices</p>
+              <h3 className="text-lg font-semibold mb-2">{t("bi.process.implementation.title")}</h3>
+              <p className="text-gray-600">{t("bi.process.implementation.desc")}</p>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">4</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Optimization</h3>
-              <p className="text-gray-600">Continuously improve and optimize your BI systems</p>
+              <h3 className="text-lg font-semibold mb-2">{t("bi.process.optimization.title")}</h3>
+              <p className="text-gray-600">{t("bi.process.optimization.desc")}</p>
             </div>
           </div>
         </div>
 
         {/* Technologies */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-12 text-center">Technologies We Use</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("bi.technologies.title")}</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
             <div className="text-center">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold">Power BI</h3>
+                <h3 className="font-semibold">{t("bi.technologies.powerbi")}</h3>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold">Tableau</h3>
+                <h3 className="font-semibold">{t("bi.technologies.tableau")}</h3>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold">QlikView</h3>
+                <h3 className="font-semibold">{t("bi.technologies.qlikview")}</h3>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold">Looker</h3>
+                <h3 className="font-semibold">{t("bi.technologies.looker")}</h3>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold">D3.js</h3>
+                <h3 className="font-semibold">{t("bi.technologies.d3")}</h3>
               </div>
             </div>
             <div className="text-center">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold">SQL Server</h3>
+                <h3 className="font-semibold">{t("bi.technologies.sql")}</h3>
               </div>
             </div>
           </div>
@@ -178,16 +181,16 @@ export default function BusinessIntelligencePage() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Data?</h2>
+          <h2 className="text-3xl font-bold mb-8">{t("bi.cta.title")}</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our Business Intelligence services can help you make better decisions and drive business growth.
+            {t("bi.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
+              {t("bi.cta.getStarted")}
             </Link>
             <Link href="/services" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
-              View All Services
+              {t("bi.cta.viewAll")}
             </Link>
           </div>
         </div>

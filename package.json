@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
+    "prebuild": "node scripts/extract-i18n-keys.js && node scripts/populate-missing-i18n-keys.js",
+    "dev:i18n:watch": "npx chokidar 'src/**/*.ts*' 'src/**/*.js' 'src/**/*.tsx' 'src/**/*.jsx' | xargs -n1 -I{} sh -c 'node scripts/extract-i18n-keys.js && node scripts/populate-missing-i18n-keys.js'",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

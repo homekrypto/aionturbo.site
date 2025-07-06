@@ -1,3 +1,5 @@
+import { t } from "@/lib/t";
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -6,11 +8,10 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Get in Touch
+              {t("contact.hero.title")}
             </h1>
             <p className="text-xl mb-8">
-              Ready to transform your business with AI? Let's discuss your project and 
-              explore how we can help you achieve your goals.
+              {t("contact.hero.description")}
             </p>
           </div>
         </div>
@@ -24,102 +25,102 @@ export default function ContactPage() {
               
               {/* Contact Form */}
               <div>
-                <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
+                <h2 className="text-3xl font-bold mb-6">{t("contact.form.title")}</h2>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name
+                        {t("contact.form.firstName")}
                       </label>
                       <input
                         type="text"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                        placeholder="Your first name"
+                        placeholder={t("contact.form.firstNamePlaceholder")}
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name
+                        {t("contact.form.lastName")}
                       </label>
                       <input
                         type="text"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                        placeholder="Your last name"
+                        placeholder={t("contact.form.lastNamePlaceholder")}
                       />
                     </div>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
+                      {t("contact.form.email")}
                     </label>
                     <input
                       type="email"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                      placeholder="your.email@company.com"
+                      placeholder={t("contact.form.emailPlaceholder")}
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
+                      {t("contact.form.company")}
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                      placeholder="Your company name"
+                      placeholder={t("contact.form.companyPlaceholder")}
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      {t("contact.form.phone")}
                     </label>
                     <input
                       type="tel"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder={t("contact.form.phonePlaceholder")}
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Service of Interest
+                      {t("contact.form.service")}
                     </label>
                     <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                      <option>Select a service...</option>
-                      <option>AI Consulting</option>
-                      <option>Generative AI Development</option>
-                      <option>Machine Learning Consulting</option>
-                      <option>Big Data Consulting</option>
-                      <option>Business Intelligence</option>
-                      <option>Data Engineering</option>
-                      <option>Other</option>
+                      <option>{t("contact.form.servicePlaceholder")}</option>
+                      <option>{t("contact.form.service.aiConsulting")}</option>
+                      <option>{t("contact.form.service.generativeAIDevelopment")}</option>
+                      <option>{t("contact.form.service.mlConsulting")}</option>
+                      <option>{t("contact.form.service.bigDataConsulting")}</option>
+                      <option>{t("contact.form.service.businessIntelligence")}</option>
+                      <option>{t("contact.form.service.dataEngineering")}</option>
+                      <option>{t("contact.form.service.other")}</option>
                     </select>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Details
+                      {t("contact.form.projectDetails")}
                     </label>
                     <textarea
                       rows={4}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                      placeholder="Tell us about your project, goals, and challenges..."
+                      placeholder={t("contact.form.projectDetailsPlaceholder")}
                     ></textarea>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Budget Range
+                      {t("contact.form.budget")}
                     </label>
                     <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                      <option>Select budget range...</option>
-                      <option>$10K - $50K</option>
-                      <option>$50K - $100K</option>
-                      <option>$100K - $250K</option>
-                      <option>$250K - $500K</option>
-                      <option>$500K+</option>
+                      <option>{t("contact.form.budgetPlaceholder")}</option>
+                      <option>{t("contact.form.budget.10-50")}</option>
+                      <option>{t("contact.form.budget.50-100")}</option>
+                      <option>{t("contact.form.budget.100-250")}</option>
+                      <option>{t("contact.form.budget.250-500")}</option>
+                      <option>{t("contact.form.budget.500+")}</option>
                     </select>
                   </div>
                   
@@ -127,16 +128,16 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition"
                   >
-                    Send Message
+                    {t("contact.form.sendMessage")}
                   </button>
                 </form>
               </div>
 
               {/* Contact Info */}
               <div>
-                <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+                <h2 className="text-3xl font-bold mb-6">{t("contact.info.title")}</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  We'd love to hear from you. Choose the most convenient way to reach us.
+                  {t("contact.info.description")}
                 </p>
                 
                 <div className="space-y-6">
@@ -147,7 +148,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Email</h3>
+                      <h3 className="font-semibold text-lg mb-1">{t("contact.info.email")}</h3>
                       <p className="text-gray-600">hello@aionturbo.com</p>
                       <p className="text-gray-600">partnerships@aionturbo.com</p>
                     </div>
@@ -160,7 +161,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Phone</h3>
+                      <h3 className="font-semibold text-lg mb-1">{t("contact.info.phone")}</h3>
                       <p className="text-gray-600">+1 (555) 123-4567</p>
                       <p className="text-gray-600">+1 (555) 987-6543</p>
                     </div>
@@ -174,7 +175,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Office</h3>
+                      <h3 className="font-semibold text-lg mb-1">{t("contact.info.office")}</h3>
                       <p className="text-gray-600">123 AI Innovation Drive<br />Silicon Valley, CA 94025</p>
                     </div>
                   </div>
@@ -186,19 +187,19 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Business Hours</h3>
+                      <h3 className="font-semibold text-lg mb-1">{t("contact.info.hours")}</h3>
                       <p className="text-gray-600">Monday - Friday: 9AM - 6PM PST<br />Saturday: 10AM - 4PM PST</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                  <h3 className="font-semibold text-lg mb-3">Schedule a Consultation</h3>
+                  <h3 className="font-semibold text-lg mb-3">{t("contact.info.schedule.title")}</h3>
                   <p className="text-gray-600 mb-4">
-                    Book a free 30-minute consultation to discuss your AI project and explore how we can help.
+                    {t("contact.info.schedule.description")}
                   </p>
                   <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
-                    Schedule Now
+                    {t("contact.info.schedule.cta")}
                   </button>
                 </div>
               </div>
@@ -211,34 +212,30 @@ export default function ContactPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">{t("contact.faq.title")}</h2>
             <div className="space-y-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">How long does a typical AI project take?</h3>
+                <h3 className="font-semibold text-lg mb-2">{t("contact.faq.q1.title")}</h3>
                 <p className="text-gray-600">
-                  Project timelines vary based on complexity, but most AI implementations take 3-6 months 
-                  from initial consultation to deployment. We'll provide a detailed timeline during our consultation.
+                  {t("contact.faq.q1.answer")}
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">What industries do you work with?</h3>
+                <h3 className="font-semibold text-lg mb-2">{t("contact.faq.q2.title")}</h3>
                 <p className="text-gray-600">
-                  We work across various industries including healthcare, finance, manufacturing, retail, 
-                  legal, logistics, and technology. Our solutions are tailored to each industry's specific needs.
+                  {t("contact.faq.q2.answer")}
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">Do you provide ongoing support?</h3>
+                <h3 className="font-semibold text-lg mb-2">{t("contact.faq.q3.title")}</h3>
                 <p className="text-gray-600">
-                  Yes, we offer comprehensive support packages including monitoring, maintenance, updates, 
-                  and optimization services to ensure your AI solutions continue to perform optimally.
+                  {t("contact.faq.q3.answer")}
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">What's the minimum budget for an AI project?</h3>
+                <h3 className="font-semibold text-lg mb-2">{t("contact.faq.q4.title")}</h3>
                 <p className="text-gray-600">
-                  AI projects can range from $10K for simple implementations to $500K+ for complex enterprise 
-                  solutions. We work with various budget ranges and can recommend the best approach for your needs.
+                  {t("contact.faq.q4.answer")}
                 </p>
               </div>
             </div>

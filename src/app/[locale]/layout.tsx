@@ -18,18 +18,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+
+
 interface LocalizedLayoutProps {
   children: React.ReactNode;
-  params: Promise<{
-    locale: string;
-  }>;
+  params: { locale: string };
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   const t = createTranslationFunction(translations.common || translations);
-  
   return {
     title: t('meta.title', "AI on Turbo - Advanced AI Solutions for Business"),
     description: t('meta.description', "Transform your business with cutting-edge AI solutions. We deliver intelligent automation, advanced analytics, and innovative AI technologies that drive growth and efficiency."),
@@ -50,14 +50,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function LocalizedLayout({ children, params }: LocalizedLayoutProps) {
-  const { locale } = await params;
+export default function LocalizedLayout({ children, params }: LocalizedLayoutProps) {
+  const { locale } = params;
   const isRTL = locale === 'ar';
-  
   return (
     <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${isRTL ? 'rtl' : ''}`}
+        className={[
+          geistSans.variable,
+          geistMono.variable,
+          'antialiased',
+          isRTL ? 'rtl' : ''
+        ].filter(Boolean).join(' ')}
       >
         <Header locale={locale} />
         {children}
@@ -70,3 +74,4 @@ export default async function LocalizedLayout({ children, params }: LocalizedLay
     </html>
   );
 }
+
