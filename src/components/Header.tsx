@@ -10,13 +10,9 @@ export default function Header({ locale = "en" }: { locale?: string }) {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
-  // Helper function to remove "nav." prefix for English locale only
+  // Helper function to get translated labels
   const getLabel = (key: string, currentLocale: string) => {
-    const label = t(key);
-    if (currentLocale === 'en') {
-      return label.replace(/^nav\./, '');
-    }
-    return label;
+    return t(key, currentLocale as import("@/lib/t").Locale);
   };
 
   // Services data
