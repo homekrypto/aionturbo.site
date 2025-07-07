@@ -430,7 +430,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-2">
               <Link href={`/${locale}`} className="nav-trigger">
-                {t("nav.home", locale)}
+                {t("nav.home", locale as import("@/lib/t").Locale)}
               </Link>
 
               {/* Services Dropdown */}
@@ -442,7 +442,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                 <button
                   className={`nav-trigger ${isServicesOpen ? "active" : ""}`}
                 >
-                  {t("nav.services.title", locale)}
+                  {t("nav.services.title", locale as import("@/lib/t").Locale)}
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -457,7 +457,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className={`modern-dropdown ${isServicesOpen ? "show" : ""}`}
                 >
                   <Link href={`/${locale}/services`} className="view-all-btn">
-                    {t("nav.services.all", locale)}
+                    {t("nav.services.all", locale as import("@/lib/t").Locale)}
                   </Link>
 
                   <div className="dropdown-grid">
@@ -470,7 +470,6 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                           className="dropdown-item"
                         >
                           <div className="item-title">{service.name}</div>
-                          <div className="item-desc">{service.desc}</div>
                         </Link>
                       ))}
                     </div>
@@ -484,7 +483,6 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                           className="dropdown-item"
                         >
                           <div className="item-title">{service.name}</div>
-                          <div className="item-desc">{service.desc}</div>
                         </Link>
                       ))}
                     </div>
@@ -498,7 +496,6 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                           className="dropdown-item"
                         >
                           <div className="item-title">{service.name}</div>
-                          <div className="item-desc">{service.desc}</div>
                         </Link>
                       ))}
                     </div>
@@ -515,7 +512,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                 <button
                   className={`nav-trigger ${isSolutionsOpen ? "active" : ""}`}
                 >
-                  {t("nav.solutions.title", locale)}
+                  {t("nav.solutions.title", locale as import("@/lib/t").Locale)}
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -530,7 +527,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className={`modern-dropdown ${isSolutionsOpen ? "show" : ""}`}
                 >
                   <Link href={`/${locale}/solutions`} className="view-all-btn">
-                    {t("nav.solutions.all", locale)}
+                    {t("nav.solutions.all", locale as import("@/lib/t").Locale)}
                   </Link>
 
                   <div className="dropdown-grid">
@@ -563,7 +560,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                 <button
                   className={`nav-trigger ${isProductsOpen ? "active" : ""}`}
                 >
-                  {t("nav.products.title", locale)}
+                  {t("nav.products.title", locale as import("@/lib/t").Locale)}
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -578,7 +575,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className={`modern-dropdown two-cols ${isProductsOpen ? "show" : ""}`}
                 >
                   <Link href={`/${locale}/products`} className="view-all-btn">
-                    {t("nav.products.all", locale)}
+                    {t("nav.products.all", locale as import("@/lib/t").Locale)}
                   </Link>
 
                   <div className="dropdown-grid two-cols">
@@ -597,15 +594,15 @@ export default function Header({ locale = "en" }: { locale?: string }) {
               </div>
 
               <Link href={`/${locale}/about`} className="nav-trigger">
-                {t("nav.about", locale)}
+                {t("nav.about", locale as import("@/lib/t").Locale)}
               </Link>
 
               <Link href={`/${locale}/case-studies`} className="nav-trigger">
-                {t("nav.caseStudies", locale)}
+                {t("nav.caseStudies", locale as import("@/lib/t").Locale)}
               </Link>
 
               <Link href={`/${locale}/contact`} className="nav-trigger">
-                {t("nav.contact", locale)}
+                {t("nav.contact", locale as import("@/lib/t").Locale)}
               </Link>
             </nav>
 
@@ -653,7 +650,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t("nav.home", locale)}
+                  {t("nav.home", locale as import("@/lib/t").Locale)}
                 </Link>
 
                 {/* Mobile Services */}
@@ -662,7 +659,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                     className="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-medium flex items-center justify-between"
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                   >
-                    {t("nav.services.title", locale)}
+                    {t("nav.services.title", locale as import("@/lib/t").Locale)}
                     <svg
                       className={`h-4 w-4 transform transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
                       fill="none"
@@ -684,7 +681,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                         className="view-all-btn"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        {t("nav.services.all", locale)}
+                        {t("nav.services.all", locale as import("@/lib/t").Locale)}
                       </Link>
                       <div className="dropdown-grid">
                         {services.map((service) => (
@@ -695,7 +692,6 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <div className="item-title">{service.name}</div>
-                            <div className="item-desc">{service.desc}</div>
                           </Link>
                         ))}
                       </div>
@@ -709,7 +705,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                     className="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-medium flex items-center justify-between"
                     onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                   >
-                    {t("nav.solutions.title", locale)}
+                    {t("nav.solutions.title", locale as import("@/lib/t").Locale)}
                     <svg
                       className={`h-4 w-4 transform transition-transform ${isSolutionsOpen ? "rotate-180" : ""}`}
                       fill="none"
@@ -731,7 +727,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                         className="view-all-btn"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        {t("nav.solutions.all", locale)}
+                        {t("nav.solutions.all", locale as import("@/lib/t").Locale)}
                       </Link>
                       <div className="dropdown-grid">
                         {solutions.map((solution) => (
@@ -755,7 +751,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                     className="w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 font-medium flex items-center justify-between"
                     onClick={() => setIsProductsOpen(!isProductsOpen)}
                   >
-                    {t("nav.products.title", locale)}
+                    {t("nav.products.title", locale as import("@/lib/t").Locale)}
                     <svg
                       className={`h-4 w-4 transform transition-transform ${isProductsOpen ? "rotate-180" : ""}`}
                       fill="none"
@@ -777,7 +773,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                         className="view-all-btn"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        {t("nav.products.all", locale)}
+                        {t("nav.products.all", locale as import("@/lib/t").Locale)}
                       </Link>
                       <div className="dropdown-grid">
                         {products.map((product) => (
@@ -803,7 +799,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t("nav.about", locale)}
+                  {t("nav.about", locale as import("@/lib/t").Locale)}
                 </Link>
 
                 <Link
@@ -811,7 +807,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t("nav.caseStudies", locale)}
+                  {t("nav.caseStudies", locale as import("@/lib/t").Locale)}
                 </Link>
 
                 <Link
@@ -819,7 +815,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                   className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t("nav.contact", locale)}
+                  {t("nav.contact", locale as import("@/lib/t").Locale)}
                 </Link>
 
                 <div className="pt-4 pb-2">
