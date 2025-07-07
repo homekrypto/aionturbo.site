@@ -11,9 +11,9 @@ export default function Header({ locale = "en" }: { locale?: string }) {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   // Helper function to remove "nav." prefix for English locale only
-  const getLabel = (key: string, locale: string) => {
-    const label = t(key, locale as any);
-    if (locale === 'en') {
+  const getLabel = (key: string, currentLocale: string) => {
+    const label = t(key);
+    if (currentLocale === 'en') {
       return label.replace(/^nav\./, '');
     }
     return label;
