@@ -1,0 +1,66 @@
+You have full permission to modify, style, and debug the code as needed.
+
+🛠 TASK OVERVIEW:
+Fix the dropdown menu structure and style in the header navigation of my site. Follow these exact specifications:
+
+---
+
+1. ✅ REMOVE "nav." PREFIX:
+- Only apply this in the **English version** of the site.
+- Only inside the following dropdowns:
+  - Services
+  - Solutions
+  - Products
+- Keep other languages untouched.
+- Remove the "nav." prefix from all submenu labels (e.g., `nav.services.aiConsulting` becomes `AI Consulting`).
+
+---
+
+2. 🎨 REDESIGN DROPDOWN STYLE (INSPIRED BY BINANCE.COM):
+- Use a **modern, clean layout** like Binance:
+  - Multi-column dropdown (2–3 columns depending on content)
+  - Rounded corners (`8px`)
+  - Soft shadow (`box-shadow`)
+  - Padding inside dropdowns (`1.5rem`)
+- Align dropdown under each top-level menu item.
+- Animate dropdown appearance with fade/slide and hover effects.
+
+---
+
+3. 🌙 THEME SWITCH SUPPORT:
+- Menu must visually switch between **dark and light modes** using existing theme toggler.
+- Apply:
+  - Light theme: white background, dark text (`#1a1a1a`)
+  - Dark theme: dark background (`#111827`), light text (`#e5e7eb`)
+  - Hover effects:
+    - Light: blue hover text or soft gray background
+    - Dark: light blue or gray hover text/background
+- Use smooth transitions (`transition-colors duration-300`)
+
+---
+
+4. 🌍 LANGUAGE SWITCH SUPPORT:
+- Ensure menu content updates dynamically with the language switcher.
+- Translation keys must render the correct label in the selected language.
+- Use clean, sentence-case labels in English (e.g., "AI Consulting").
+
+---
+
+5. 📱 RESPONSIVE:
+- On mobile: Collapse menu into a hamburger layout.
+- Dropdowns should become accordion-style or drawer-based.
+- Must support tap-to-open and close interactions.
+
+---
+
+6. ✅ DEBUG & CLEANUP:
+- If any issues arise (broken layout, missing translations, theme conflict), debug and fix them.
+- Ensure everything works together: dropdown, theme switch, language switch, responsiveness.
+
+---
+
+📌 Final result must look clean, like Binance's dropdowns, and work across all themes and devices.
+
+You have permission to rewrite any necessary CSS, HTML, logic files or configuration to meet these standards.
+
+Proceed with the implementation and confirm when complete.
