@@ -74,17 +74,17 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.services", effectiveLocale)}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">{t("footer.sections.services", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-gray-700 hover:text-indigo-600 transition">
+                  <Link href={service.href} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href={`/${locale}/services`} className="text-indigo-600 hover:text-indigo-500 transition">
+                <Link href={`/${locale}/services`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
                   {t("footer.viewAllServices")}
                 </Link>
               </li>
@@ -93,17 +93,17 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.products", effectiveLocale)}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">{t("footer.sections.products", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product.name}>
-                  <Link href={product.href} className="text-gray-700 hover:text-indigo-600 transition">
+                  <Link href={product.href} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {product.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href={`/${locale}/products`} className="text-indigo-600 hover:text-indigo-500 transition">
+                <Link href={`/${locale}/products`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
                   {t("footer.viewAllProducts")}
                 </Link>
               </li>
@@ -112,17 +112,17 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.solutions", effectiveLocale)}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">{t("footer.sections.solutions", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {solutions.map((solution) => (
                 <li key={solution.name}>
-                  <Link href={solution.href} className="text-gray-700 hover:text-indigo-600 transition">
+                  <Link href={solution.href} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {solution.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href={`/${locale}/solutions`} className="text-indigo-600 hover:text-indigo-500 transition">
+                <Link href={`/${locale}/solutions`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
                   {t("footer.viewAllSolutions")}
                 </Link>
               </li>
@@ -131,30 +131,30 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Case Studies */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.caseStudies", effectiveLocale)}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">{t("footer.sections.caseStudies", effectiveLocale)}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`/${locale}/case-studies/carbon-credit-verification`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/case-studies/carbon-credit-verification`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.caseStudies.carbonCreditAi")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/case-studies/wind-turbine-maintenance`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/case-studies/wind-turbine-maintenance`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.caseStudies.windTurbineAi")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/case-studies/counterfeit-detection`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/case-studies/counterfeit-detection`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.caseStudies.counterfeitDetection")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/case-studies/retail-robots`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/case-studies/retail-robots`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.caseStudies.retailAutomation")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/case-studies`} className="text-indigo-600 hover:text-indigo-500 transition">
+                <Link href={`/${locale}/case-studies`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
                   {t("footer.viewAllCaseStudies")}
                 </Link>
               </li>
@@ -163,17 +163,17 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Industries */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.industries", effectiveLocale)}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">{t("footer.sections.industries", effectiveLocale)}</h3>
             <ul className="space-y-2">
               {industries.map((industry) => (
                 <li key={industry.name}>
-                  <Link href={industry.href} className="text-gray-700 hover:text-indigo-600 transition">
+                  <Link href={industry.href} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {industry.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href={`/${locale}/solutions`} className="text-indigo-600 hover:text-indigo-500 transition">
+                <Link href={`/${locale}/solutions`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
                   {t("footer.viewAllIndustries")}
                 </Link>
               </li>
@@ -182,25 +182,25 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-black">{t("footer.sections.company", effectiveLocale)}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">{t("footer.sections.company", effectiveLocale)}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`/${locale}/about`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/about`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.company.about", effectiveLocale)}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/case-studies`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/case-studies`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.company.caseStudies", effectiveLocale)}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/contact`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/contact`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.company.contact", effectiveLocale)}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/services`} className="text-gray-700 hover:text-indigo-600 transition">
+                <Link href={`/${locale}/services`} className="text-gray-700 hover:text-indigo-600 transition dark:text-gray-200 dark:hover:text-indigo-400">
                   {t("footer.company.careers", effectiveLocale)}
                 </Link>
               </li>
