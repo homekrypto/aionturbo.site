@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ai-on-turbo.com/pl/</loc>
-    <lastmod>2025-07-05</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ai-on-turbo.com/es/" />
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://ai-on-turbo.com/pl/services</loc>
-    <lastmod>2025-07-05</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ai-on-turbo.com/es/services" />
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://ai-on-turbo.com/pl/products</loc>
-    <lastmod>2025-07-05</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ai-on-turbo.com/es/products" />
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://ai-on-turbo.com/pl/solutions</loc>
-    <lastmod>2025-07-05</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ai-on-turbo.com/es/solutions" />
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://ai-on-turbo.com/pl/about</loc>
-    <lastmod>2025-07-05</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ai-on-turbo.com/es/about" />
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://ai-on-turbo.com/pl/contact</loc>
-    <lastmod>2025-07-05</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ai-on-turbo.com/es/contact" />
