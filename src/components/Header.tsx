@@ -314,11 +314,7 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
           transform: translateY(-1px);
         }
         
-        .view-all-btn svg {
-          margin-left: 0.5rem;
-          width: 1rem;
-          height: 1rem;
-        }
+        
         
         /* Dark theme styles */
         [data-theme="dark"] .modern-dropdown {
@@ -468,9 +464,6 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 <div className={`modern-dropdown ${isServicesOpen ? 'show' : ''}`}>
                   <Link href={`/${locale}/services`} className="view-all-btn">
                     {t("nav.services.all", locale)}
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
                   </Link>
                   
                   <div className="dropdown-grid">
@@ -535,9 +528,6 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 <div className={`modern-dropdown ${isSolutionsOpen ? 'show' : ''}`}>
                   <Link href={`/${locale}/solutions`} className="view-all-btn">
                     {t("nav.solutions.all", locale)}
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
                   </Link>
                   
                   <div className="dropdown-grid">
@@ -575,9 +565,6 @@ export default function Header({ locale = 'en' }: { locale?: string }) {
                 <div className={`modern-dropdown two-cols ${isProductsOpen ? 'show' : ''}`}>
                   <Link href={`/${locale}/products`} className="view-all-btn">
                     {t("nav.products.all", locale)}
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
                   </Link>
                   
                   <div className="dropdown-grid two-cols">
