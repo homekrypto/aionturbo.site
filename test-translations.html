@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Polish Translations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .translation {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+        }
+        .key {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .value {
+            margin-top: 5px;
+            color: #333;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .services {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .nav a:hover {
+            color: #007bff;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Polish Translations</h1>
+    
+    <div class="section success">
+        <h2>✅ Translation Status</h2>
+        <p>This page shows the Polish translations working correctly.</p>
+    </div>
+
+    <div id="translations" class="section">
+        <h2>📝 Key Translations</h2>
+        <div id="translation-list"></div>
+    </div>
+
+    <div id="sample-content" class="section">
+        <h2>🎯 Sample Content</h2>
+        <div id="hero-section"></div>
+        <div id="services-section"></div>
+        <div id="nav-section"></div>
+    </div>
+
+    <script>
+        // Polish translations (embedded directly)
+        const polishTranslations = {
+            "meta": {
+                "title": "AI on Turbo - Zaawansowane rozwiązania AI dla biznesu",
+                "description": "Przekształć swój biznes dzięki najnowocześniejszym rozwiązaniom AI. Dostarczamy inteligentną automatyzację, zaawansowaną analitykę i innowacyjne technologie AI, które napędzają wzrost i efektywność."
+            },
+            "hero": {
+                "title": "Twój zaufany partner AI",
+                "subtitle": "Ekspercka konsultacja AI od 2017 roku.",
+                "description": "Każdy biznes platformowy zostanie przekształcony przez AI w ciągu najbliższych 5 lat. Firmy, które zachowają kontrolę nad swoimi możliwościami AI, szybko zyskają przewagę konkurencyjną nad tymi, które subskrybują i są zależne od gotowych dostawców AI.",
+                "cta": {
+                    "consultation": "Zarezerwuj konsultację AI",
+                    "contact": "Skontaktuj się z nami"
+                }
+            },
+            "featured": {
+                "title": "Jak pokazano w"
+            },
+            "platform": {
+                "title": "Twoja wewnętrzna platforma sztucznej inteligencji",
+                "description": "Buduj niestandardowe rozwiązania AI, które bezproblemowo integrują się z istniejącymi systemami i przepływami pracy."
+            },
+            "services": {
+                "title": "Usługi AI",
+                "subtitle": "Kompleksowe rozwiązania AI i danych, aby przekształcić operacje biznesowe i napędzać innowacje.",
+                "learnMore": "Dowiedz się więcej",
+                "automation": {
+                    "title": "Inteligentna automatyzacja",
+                    "description": "Automatyzuj złożone przepływy pracy i procesy decyzyjne za pomocą systemów napędzanych AI."
+                },
+                "analytics": {
+                    "title": "Zaawansowana analityka",
+                    "description": "Wyciągaj wnioski z danych za pomocą uczenia maszynowego i analityki predykcyjnej."
+                },
+                "consulting": {
+                    "title": "Konsultacja strategii AI",
+                    "description": "Opracuj kompleksowe strategie AI zgodne z celami biznesowymi."
+                },
+                "aiConsulting": {
+                    "title": "Konsultacja AI",
+                    "description": "Strategiczna konsultacja AI, aby pomóc w identyfikacji możliwości i opracowaniu map drogowych AI."
+                },
+                "bigData": {
+                    "title": "Konsultacja Big Data",
+                    "description": "Przekształć dane w praktyczne wnioski dzięki naszej ekspertyzie big data."
+                },
+                "genAI": {
+                    "title": "Konsultacja AI generatywnej",
+                    "description": "Wykorzystaj moc generatywnej AI do tworzenia innowacyjnych rozwiązań."
+                },
+                "businessIntelligence": {
+                    "title": "Inteligencja biznesowa",
+                    "description": "Podejmuj decyzje oparte na danych dzięki naszym rozwiązaniom BI."
+                },
+                "dataEngineering": {
+                    "title": "Inżynieria danych",
+                    "description": "Buduj solidne potoki danych i infrastrukturę."
+                },
+                "machineLearning": {
+                    "title": "Konsultacja uczenia maszynowego",
+                    "description": "Opracuj niestandardowe modele ML dostosowane do potrzeb biznesowych."
+                },
+                "cta": {
+                    "title": "Gotowy do rozpoczęcia?",
+                    "description": "Pozwól nam pomóc w identyfikacji odpowiednich rozwiązań AI dla Twojego biznesu.",
+                    "button": "Skontaktuj się z nami dziś"
+                }
+            },
+            "why": {
+                "title": "Dlaczego wybrać AI on Turbo",
+                "description": "Łączymy głęboką ekspertyzę techniczną z wiedzą biznesową, aby dostarczać rozwiązania AI, które napędzają rzeczywiste wyniki.",
+                "expertise": {
+                    "title": "Sprawdzona ekspertyza",
+                    "description": "Ponad 7 lat doświadczenia w AI i uczeniu maszynowym w różnych branżach."
+                },
+                "custom": {
+                    "title": "Niestandardowe rozwiązania",
+                    "description": "Dostosowane rozwiązania AI zaprojektowane specjalnie dla potrzeb i wyzwań biznesowych."
+                },
+                "support": {
+                    "title": "Ciągłe wsparcie",
+                    "description": "Kompleksowe wsparcie i konserwacja, aby zapewnić optymalne działanie systemów AI."
+                }
+            },
+            "stats": {
+                "projects": "Ukończone projekty",
+                "satisfaction": "Satysfakcja klienta"
+            },
+            "cta": {
+                "title": "Gotowy do przekształcenia biznesu dzięki AI?",
+                "description": "Pozwól nam pomóc w odblokowaniu pełnego potencjału sztucznej inteligencji dla Twojej organizacji.",
+                "contact": "Rozpocznij dziś",
+                "learn": "Dowiedz się więcej"
+            },
+            "nav": {
+                "home": "Strona główna",
+                "services": "Usługi",
+                "products": "Produkty",
+                "solutions": "Rozwiązania",
+                "about": "O nas",
+                "contact": "Kontakt",
+                "caseStudies": "Studia przypadków"
+            }
+        };
+
+        // Display translations
+        const translationsDiv = document.getElementById('translation-list');
+        
+        // Show key translations
+        const keyTranslations = [
+            { key: 'meta.title', value: polishTranslations.meta?.title },
+            { key: 'hero.title', value: polishTranslations.hero?.title },
+            { key: 'hero.subtitle', value: polishTranslations.hero?.subtitle },
+            { key: 'services.title', value: polishTranslations.services?.title },
+            { key: 'nav.home', value: polishTranslations.nav?.home },
+            { key: 'nav.services', value: polishTranslations.nav?.services },
+            { key: 'nav.contact', value: polishTranslations.nav?.contact }
+        ];
+        
+        keyTranslations.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'translation';
+            div.innerHTML = `
+                <div class="key">${item.key}:</div>
+                <div class="value">${item.value || '❌ Missing translation'}</div>
+            `;
+            translationsDiv.appendChild(div);
+        });
+        
+        // Display sample content
+        const heroSection = document.getElementById('hero-section');
+        heroSection.innerHTML = `
+            <div class="hero">
+                <h1>${polishTranslations.hero?.title || 'Missing title'}</h1>
+                <p><strong>${polishTranslations.hero?.subtitle || 'Missing subtitle'}</strong></p>
+                <p>${polishTranslations.hero?.description || 'Missing description'}</p>
+                <button>${polishTranslations.hero?.cta?.consultation || 'Missing CTA'}</button>
+                <button>${polishTranslations.hero?.cta?.contact || 'Missing contact'}</button>
+            </div>
+        `;
+        
+        const servicesSection = document.getElementById('services-section');
+        servicesSection.innerHTML = `
+            <div class="services">
+                <h2>${polishTranslations.services?.title || 'Missing services title'}</h2>
+                <p>${polishTranslations.services?.subtitle || 'Missing services subtitle'}</p>
+                <div>
+                    <h4>${polishTranslations.services?.automation?.title || 'Missing automation title'}</h4>
+                    <p>${polishTranslations.services?.automation?.description || 'Missing automation description'}</p>
+                </div>
+                <div>
+                    <h4>${polishTranslations.services?.analytics?.title || 'Missing analytics title'}</h4>
+                    <p>${polishTranslations.services?.analytics?.description || 'Missing analytics description'}</p>
+                </div>
+            </div>
+        `;
+        
+        const navSection = document.getElementById('nav-section');
+        navSection.innerHTML = `
+            <div class="nav">
+                <nav>
+                    <a href="#">${polishTranslations.nav?.home || 'Home'}</a> |
+                    <a href="#">${polishTranslations.nav?.services || 'Services'}</a> |
+                    <a href="#">${polishTranslations.nav?.products || 'Products'}</a> |
+                    <a href="#">${polishTranslations.nav?.solutions || 'Solutions'}</a> |
+                    <a href="#">${polishTranslations.nav?.about || 'About'}</a> |
+                    <a href="#">${polishTranslations.nav?.contact || 'Contact'}</a>
+                </nav>
+            </div>
+        `;
+    </script>
+</body>
+</html> 

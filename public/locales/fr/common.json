@@ -1,95 +1,95 @@
 {
   "meta": {
-    "title": "AI on Turbo - Advanced AI Solutions for Business",
-    "description": "Transform your business with cutting-edge AI solutions. We deliver intelligent automation, advanced analytics, and innovative AI technologies that drive growth and efficiency."
+    "title": "AI on Turbo - Solutions d'IA avancées pour les entreprises",
+    "description": "Transformez votre entreprise avec des solutions d'IA de pointe. Nous fournissons l'automatisation intelligente, l'analyse avancée et les technologies d'IA innovantes qui stimulent la croissance et l'efficacité."
   },
   "hero": {
-    "title": "Your Trusted AI Partner",
-    "subtitle": "Expert AI Consultancy Since 2017.",
-    "description": "Every platform business will be transformed by AI in the next 5 years. Businesses that keep control over their AI capabilities will quickly gain a competitive edge over those that subscribe to and are dependent on off-the-shelf AI providers.",
+    "title": "Votre partenaire IA de confiance",
+    "subtitle": "Consultation experte en IA depuis 2017.",
+    "description": "Chaque entreprise de plateforme sera transformée par l'IA dans les 5 prochaines années. Les entreprises qui gardent le contrôle de leurs capacités d'IA gagneront rapidement un avantage concurrentiel sur celles qui s'abonnent et dépendent de fournisseurs d'IA prêts à l'emploi.",
     "cta": {
-      "consultation": "Book AI Consultation",
-      "contact": "Contact Us"
+      "consultation": "Réserver une consultation IA",
+      "contact": "Contactez-nous"
     }
   },
   "featured": {
-    "title": "As featured in"
+    "title": "Comme présenté dans"
   },
   "platform": {
-    "title": "Your In-House Artificial Intelligence Platform",
-    "description": "Build custom AI solutions that integrate seamlessly with your existing systems and workflows."
+    "title": "Votre plateforme d'intelligence artificielle interne",
+    "description": "Construisez des solutions d'IA personnalisées qui s'intègrent parfaitement à vos systèmes et flux de travail existants."
   },
   "services": {
-    "title": "AI Services",
-    "subtitle": "Comprehensive AI and data solutions to transform your business operations and drive innovation.",
-    "learnMore": "Learn More",
+    "title": "Services d'IA",
+    "subtitle": "Solutions complètes d'IA et de données pour transformer vos opérations commerciales et stimuler l'innovation.",
+    "learnMore": "En savoir plus",
     "automation": {
-      "title": "Intelligent Automation",
-      "description": "Automate complex workflows and decision-making processes with AI-powered systems."
+      "title": "Automatisation intelligente",
+      "description": "Automatisez les flux de travail complexes et les processus de prise de décision avec des systèmes alimentés par l'IA."
     },
     "analytics": {
-      "title": "Advanced Analytics",
-      "description": "Extract insights from your data with machine learning and predictive analytics."
+      "title": "Analyses avancées",
+      "description": "Extrayez des informations de vos données grâce à l'apprentissage automatique et à l'analyse prédictive."
     },
     "consulting": {
-      "title": "AI Strategy Consulting",
-      "description": "Develop comprehensive AI strategies aligned with your business objectives."
+      "title": "Conseil en stratégie IA",
+      "description": "Développez des stratégies d'IA complètes alignées sur vos objectifs commerciaux."
     },
     "aiConsulting": {
-      "title": "AI Consulting",
-      "description": "Strategic AI consulting to help you identify opportunities and develop AI roadmaps."
+      "title": "Conseil en IA",
+      "description": "Conseil stratégique en IA pour vous aider à identifier les opportunités et développer des feuilles de route IA."
     },
     "bigData": {
-      "title": "Big Data Consulting",
-      "description": "Transform your data into actionable insights with our big data expertise."
+      "title": "Conseil en Big Data",
+      "description": "Transformez vos données en informations exploitables grâce à notre expertise en big data."
     },
     "genAI": {
-      "title": "Generative AI Consulting",
-      "description": "Leverage the power of generative AI to create innovative solutions."
+      "title": "Conseil en IA générative",
+      "description": "Exploitez la puissance de l'IA générative pour créer des solutions innovantes."
     },
     "businessIntelligence": {
-      "title": "Business Intelligence",
-      "description": "Make data-driven decisions with our BI solutions."
+      "title": "Intelligence d'affaires",
+      "description": "Prenez des décisions basées sur les données avec nos solutions BI."
     },
     "dataEngineering": {
-      "title": "Data Engineering",
-      "description": "Build robust data pipelines and infrastructure."
+      "title": "Ingénierie des données",
+      "description": "Construisez des pipelines de données et une infrastructure robustes."
     },
     "machineLearning": {
-      "title": "Machine Learning Consulting",
-      "description": "Develop custom ML models tailored to your business needs."
+      "title": "Conseil en apprentissage automatique",
+      "description": "Développez des modèles ML personnalisés adaptés à vos besoins commerciaux."
     },
     "cta": {
-      "title": "Ready to Get Started?",
-      "description": "Let us help you identify the right AI solutions for your business.",
-      "button": "Contact Us Today"
+      "title": "Prêt à commencer ?",
+      "description": "Laissez-nous vous aider à identifier les bonnes solutions d'IA pour votre entreprise.",
+      "button": "Contactez-nous aujourd'hui"
     }
   },
   "why": {
-    "title": "Why Choose AI on Turbo",
-    "description": "We combine deep technical expertise with business acumen to deliver AI solutions that drive real results.",
+    "title": "Pourquoi choisir AI on Turbo",
+    "description": "Nous combinons une expertise technique approfondie avec le sens des affaires pour fournir des solutions d'IA qui produisent de vrais résultats.",
     "expertise": {
-      "title": "Proven Expertise",
-      "description": "Over 7 years of experience in AI and machine learning across various industries."
+      "title": "Expertise éprouvée",
+      "description": "Plus de 7 ans d'expérience en IA et apprentissage automatique dans diverses industries."
     },
     "custom": {
-      "title": "Custom Solutions",
-      "description": "Tailored AI solutions designed specifically for your business needs and challenges."
+      "title": "Solutions personnalisées",
+      "description": "Solutions d'IA sur mesure conçues spécifiquement pour vos besoins et défis commerciaux."
     },
     "support": {
-      "title": "Ongoing Support",
-      "description": "Comprehensive support and maintenance to ensure your AI systems perform optimally."
+      "title": "Support continu",
+      "description": "Support et maintenance complets pour assurer des performances optimales de vos systèmes d'IA."
     }
   },
   "stats": {
-    "projects": "Projects Completed",
-    "satisfaction": "Client Satisfaction"
+    "projects": "Projets terminés",
+    "satisfaction": "Satisfaction client"
   },
   "cta": {
-    "title": "Ready to Transform Your Business with AI?",
-    "description": "Let us help you unlock the full potential of artificial intelligence for your organization.",
-    "contact": "Get Started Today",
-    "learn": "Learn More"
+    "title": "Prêt à transformer votre entreprise avec l'IA ?",
+    "description": "Laissez-nous vous aider à libérer le plein potentiel de l'intelligence artificielle pour votre organisation.",
+    "contact": "Commencez aujourd'hui",
+    "learn": "En savoir plus"
   },
   "nav": {
     "home": "Accueil",
@@ -98,7 +98,7 @@
     "solutions": "Solutions",
     "about": "À propos",
     "contact": "Contact",
-    "caseStudies": "Case Studies"
+    "caseStudies": "Études de cas"
   },
   "about": {
     "title": "About AI on Turbo",
@@ -132,13 +132,13 @@
     "cta": {
       "title": "Ready to Transform Your Business?",
       "text": "Let us help you harness the power of AI to drive growth and innovation.",
-      "button": "Get Started Today"
+      "button": "Commencez aujourd'hui"
     }
   },
   "solutions": {
     "title": "AI Solutions",
     "subtitle": "Industry-specific AI solutions designed to solve real-world business challenges.",
-    "learnMore": "Learn More",
+    "learnMore": "En savoir plus",
     "aiWorkforce": {
       "title": "AI-Empowered Workforce",
       "description": "Augment your team with AI capabilities to boost productivity and innovation."
@@ -183,7 +183,7 @@
   "products": {
     "title": "AI Products",
     "subtitle": "Innovative AI products designed to accelerate your digital transformation and enhance productivity.",
-    "learnMore": "Learn More",
+    "learnMore": "En savoir plus",
     "contextclue": {
       "title": "ContextClue",
       "description": "Advanced context-aware AI system that understands and responds to complex queries with precision.",
@@ -220,7 +220,7 @@
     }
   },
   "caseStudies": {
-    "title": "Case Studies",
+    "title": "Études de cas",
     "subtitle": "Real-world AI implementations that delivered measurable results for our clients across various industries.",
     "readMore": "Read Case Study",
     "carbonCredit": {
@@ -274,7 +274,7 @@
     "results": {
       "title": "Proven Results",
       "projects": "Successful Projects",
-      "satisfaction": "Client Satisfaction",
+      "satisfaction": "Satisfaction client",
       "savings": "Cost Savings Generated",
       "years": "Years of Experience"
     },
@@ -285,7 +285,7 @@
     }
   },
   "contact": {
-    "title": "Contact Us",
+    "title": "Contactez-nous",
     "subtitle": "Ready to transform your business with AI? Get in touch with our experts today.",
     "form": {
       "title": "Get in Touch",
@@ -299,9 +299,9 @@
       "companyPlaceholder": "Your Company",
       "service": "Service Interested In",
       "selectService": "Select a service",
-      "aiConsulting": "AI Consulting",
+      "aiConsulting": "Conseil en IA",
       "machineLearning": "Machine Learning",
-      "dataEngineering": "Data Engineering",
+      "dataEngineering": "Ingénierie des données",
       "generativeAI": "Generative AI",
       "customSolution": "Custom Solution",
       "message": "Message",
@@ -346,12 +346,12 @@
     "services": "Services",
     "products": "Produits",
     "solutions": "Solutions",
-    "caseStudies": "Case Studies",
+    "caseStudies": "Études de cas",
     "industries": "Industries",
     "viewAll": "View All {{category}} →",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "contact": "Contact Us",
+    "contact": "Contactez-nous",
     "copyright": "© 2024 AI on Turbo. All rights reserved."
   }
 }

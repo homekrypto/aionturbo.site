@@ -12,6 +12,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "google-translate-api": "^2.3.0",
     "i18next": "^25.3.1",
     "next": "15.3.5",
     "next-i18next": "^15.4.2",

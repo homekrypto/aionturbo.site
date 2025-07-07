@@ -1,3 +1,4 @@
+
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -11,16 +12,16 @@ export default function HreflangTags({ pathname }: HreflangTagsProps) {
   
   return (
     <Head>
-      <link rel="alternate" hrefLang="es" href={`https://ai-on-turbo.com${'/es' + currentPath}`} />
-      <link rel="alternate" hrefLang="fr" href={`https://ai-on-turbo.com${'/fr' + currentPath}`} />
-      <link rel="alternate" hrefLang="de" href={`https://ai-on-turbo.com${'/de' + currentPath}`} />
-      <link rel="alternate" hrefLang="pl" href={`https://ai-on-turbo.com${'/pl' + currentPath}`} />
-      <link rel="alternate" hrefLang="pt" href={`https://ai-on-turbo.com${'/pt' + currentPath}`} />
-      <link rel="alternate" hrefLang="ar" href={`https://ai-on-turbo.com${'/ar' + currentPath}`} />
-      <link rel="alternate" hrefLang="tr" href={`https://ai-on-turbo.com${'/tr' + currentPath}`} />
-      <link rel="alternate" hrefLang="ja" href={`https://ai-on-turbo.com${'/ja' + currentPath}`} />
-      <link rel="alternate" hrefLang="en" href={`https://ai-on-turbo.com${currentPath}`} />
-      <link rel="alternate" hrefLang="x-default" href={`https://ai-on-turbo.com${currentPath}`} />
+      <link rel="alternate" hreflang="es" href={`https://ai-on-turbo.com${'/es' + currentPath}`} />
+      <link rel="alternate" hreflang="fr" href={`https://ai-on-turbo.com${'/fr' + currentPath}`} />
+      <link rel="alternate" hreflang="de" href={`https://ai-on-turbo.com${'/de' + currentPath}`} />
+      <link rel="alternate" hreflang="pl" href={`https://ai-on-turbo.com${'/pl' + currentPath}`} />
+      <link rel="alternate" hreflang="pt" href={`https://ai-on-turbo.com${'/pt' + currentPath}`} />
+      <link rel="alternate" hreflang="ar" href={`https://ai-on-turbo.com${'/ar' + currentPath}`} />
+      <link rel="alternate" hreflang="tr" href={`https://ai-on-turbo.com${'/tr' + currentPath}`} />
+      <link rel="alternate" hreflang="ja" href={`https://ai-on-turbo.com${'/ja' + currentPath}`} />
+      <link rel="alternate" hreflang="en" href={`https://ai-on-turbo.com${currentPath}`} />
+      <link rel="alternate" hreflang="x-default" href={`https://ai-on-turbo.com${currentPath}`} />
     </Head>
   );
 }
