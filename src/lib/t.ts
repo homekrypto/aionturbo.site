@@ -81,5 +81,25 @@ export function getTranslations(locale: Locale) {
 export function t(key: string, locale?: Locale): string {
   const effectiveLocale = locale || detectLocale();
   const translations = loadTranslations(effectiveLocale);
-  return translations[key] || key;
+  let translation = translations[key] || key;
+  
+  // Remove "nav." prefix for English navigation items in specific dropdowns
+  if (effectiveLocale === 'en' && key.startsWith('nav.') && 
+      (key.includes('.services.') || key.includes('.solutions.') || key.includes('.products.')) &&
+      !key.endsWith('.title') && !key.endsWith('.all')) {
+    // For English, return clean labels without nav prefix
+    const parts = key.split('.');
+    if (parts.length >= 3) {
+      const cleanKey = parts.slice(2).join('.');
+      // Convert camelCase to sentence case
+      translation = cleanKey.replace(/([A-Z])/g, ' $1')
+        .replace(/^./, str => str.toUpperCase())
+        .replace(/ai/gi, 'AI')
+        .replace(/llm/gi, 'LLM')
+        .replace(/rag/gi, 'RAG')
+        .replace(/mlops/gi, 'MLOps');
+    }
+  }
+  
+  return translation;
 }

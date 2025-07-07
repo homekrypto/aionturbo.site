@@ -204,6 +204,31 @@ body {
   }
 }
 
+/* Dropdown specific theme variables */
+:root {
+  --dropdown-bg: #ffffff;
+  --dropdown-border: #e5e7eb;
+  --dropdown-text: #374151;
+  --dropdown-hover-bg: #f3f4f6;
+  --dropdown-hover-text: #6366f1;
+  --dropdown-section-title: #6366f1;
+  --dropdown-primary: #6366f1;
+  --dropdown-primary-hover: #4f46e5;
+  --dropdown-desc-text: #6b7280;
+}
+
+[data-theme="dark"] {
+  --dropdown-bg: #111827;
+  --dropdown-border: #374151;
+  --dropdown-text: #e5e7eb;
+  --dropdown-hover-bg: #1f2937;
+  --dropdown-hover-text: #93c5fd;
+  --dropdown-section-title: #93c5fd;
+  --dropdown-primary: #93c5fd;
+  --dropdown-primary-hover: #bfdbfe;
+  --dropdown-desc-text: #9ca3af;
+}
+
 /* Print styles */
 @media print {
   [data-theme="dark"] {
@@ -213,5 +238,7 @@ body {
     --primary-text: #000000;
     --secondary-text: #000000;
     --tertiary-text: #000000;
+    --dropdown-bg: #ffffff;
+    --dropdown-text: #000000;
   }
 }
