@@ -1,0 +1,234 @@
+[20:07:13.345] Running build in Washington, D.C., USA (East) – iad1
+[20:07:13.349] Build machine configuration: 2 cores, 8 GB
+[20:07:13.394] Cloning github.com/homekrypto/AI-on-Turbo (Branch: main, Commit: ae52a9a)
+[20:07:14.100] Cloning completed: 706.000ms
+[20:07:16.934] Restored build cache from previous deployment (87hsE2kzi6TRbye49k9hgU1gsLBi)
+[20:07:17.375] Running "vercel build"
+[20:07:17.793] Vercel CLI 44.2.12
+[20:07:18.593] Installing dependencies...
+[20:07:19.679] 
+[20:07:19.679] up to date in 787ms
+[20:07:19.680] 
+[20:07:19.680] 143 packages are looking for funding
+[20:07:19.680]   run `npm fund` for details
+[20:07:19.711] Detected Next.js version: 15.3.5
+[20:07:19.712] Running "npm run build"
+[20:07:19.821] 
+[20:07:19.822] > ai-on-turbo@0.1.0 prebuild
+[20:07:19.822] > node scripts/extract-i18n-keys.js && node scripts/populate-missing-i18n-keys.js
+[20:07:19.823] 
+[20:07:19.861] -
+[20:07:19.861] .
+[20:07:19.861] .global-footer-controls
+[20:07:19.861] accept-language
+[20:07:19.861] aiConsulting.contact.cta
+[20:07:19.862] aiConsulting.contact.description
+[20:07:19.862] aiConsulting.contact.title
+[20:07:19.862] aiConsulting.hero.ctaCaseStudies
+[20:07:19.862] aiConsulting.hero.ctaStart
+[20:07:19.862] aiConsulting.hero.description
+[20:07:19.863] aiConsulting.hero.title
+[20:07:19.863] aiConsulting.process.description
+[20:07:19.863] aiConsulting.process.title
+[20:07:19.863] aiConsulting.whatWeOffer.description
+[20:07:19.863] aiConsulting.whatWeOffer.services.change
+[20:07:19.864] aiConsulting.whatWeOffer.services.changeDesc
+[20:07:19.864] aiConsulting.whatWeOffer.services.implementation
+[20:07:19.864] aiConsulting.whatWeOffer.services.implementationDesc
+[20:07:19.864] aiConsulting.whatWeOffer.services.readiness
+[20:07:19.864] aiConsulting.whatWeOffer.services.readinessDesc
+[20:07:19.864] aiConsulting.whatWeOffer.services.strategy
+[20:07:19.865] aiConsulting.whatWeOffer.services.strategyDesc
+[20:07:19.865] aiConsulting.whatWeOffer.services.technology
+[20:07:19.865] aiConsulting.whatWeOffer.services.technologyDesc
+[20:07:19.865] aiConsulting.whatWeOffer.services.useCases
+[20:07:19.866] aiConsulting.whatWeOffer.services.useCasesDesc
+[20:07:19.866] aiConsulting.whatWeOffer.title
+[20:07:19.866] aiConsulting.why.clientCentric
+[20:07:19.866] aiConsulting.why.clientCentricDesc
+[20:07:19.866] aiConsulting.why.description
+[20:07:19.866] aiConsulting.why.expertise
+[20:07:19.866] aiConsulting.why.expertiseDesc
+[20:07:19.866] aiConsulting.why.title
+[20:07:19.866] aiConsulting.why.trackRecord
+[20:07:19.866] aiConsulting.why.trackRecordDesc
+[20:07:19.866] bi.cta.description
+[20:07:19.866] bi.cta.getStarted
+[20:07:19.866] bi.cta.title
+[20:07:19.866] bi.cta.viewAll
+[20:07:19.866] bi.hero.description
+[20:07:19.866] bi.hero.title
+[20:07:19.866] bi.overview.benefits.cost
+[20:07:19.867] bi.overview.benefits.efficiency
+[20:07:19.867] bi.overview.benefits.realtime
+[20:07:19.867] bi.overview.benefits.speed
+[20:07:19.867] bi.overview.benefits.title
+[20:07:19.867] bi.overview.p1
+[20:07:19.867] bi.overview.p2
+[20:07:19.867] bi.overview.title
+[20:07:19.867] bi.process.assessment.desc
+[20:07:19.867] bi.process.assessment.title
+[20:07:19.867] bi.process.implementation.desc
+[20:07:19.867] bi.process.implementation.title
+[20:07:19.867] bi.process.optimization.desc
+[20:07:19.868] bi.process.optimization.title
+[20:07:19.869] bi.process.strategy.desc
+[20:07:19.869] bi.process.strategy.title
+[20:07:19.869] bi.process.title
+[20:07:19.869] bi.services.customDashboards.desc
+[20:07:19.869] bi.services.customDashboards.title
+[20:07:19.869] bi.services.dataViz.desc
+[20:07:19.870] bi.services.dataViz.title
+[20:07:19.870] bi.services.executive.desc
+[20:07:19.870] bi.services.executive.title
+[20:07:19.870] bi.services.performance.desc
+[20:07:19.870] bi.services.performance.title
+[20:07:19.871] bi.services.predictive.desc
+[20:07:19.871] bi.services.predictive.title
+[20:07:19.871] bi.services.realtime.desc
+[20:07:19.871] bi.services.realtime.title
+[20:07:19.871] bi.services.title
+[20:07:19.872] bi.technologies.d3
+[20:07:19.872] bi.technologies.looker
+[20:07:19.872] bi.technologies.powerbi
+[20:07:19.872] bi.technologies.qlikview
+[20:07:19.872] bi.technologies.sql
+[20:07:19.872] bi.technologies.tableau
+[20:07:19.872] bi.technologies.title
+[20:07:19.873] contact.faq.q1.answer
+[20:07:19.873] contact.faq.q1.title
+[20:07:19.873] contact.faq.q2.answer
+[20:07:19.873] contact.faq.q2.title
+[20:07:19.873] contact.faq.q3.answer
+[20:07:19.873] contact.faq.q3.title
+[20:07:19.873] contact.faq.q4.answer
+[20:07:19.874] contact.faq.q4.title
+[20:07:19.874] contact.faq.title
+[20:07:19.874] contact.form.budget
+[20:07:19.874] contact.form.budget.10-50
+[20:07:19.874] contact.form.budget.100-250
+[20:07:19.874] contact.form.budget.250-500
+[20:07:19.875] contact.form.budget.50-100
+[20:07:19.875] contact.form.budgetPlaceholder
+[20:07:19.875] contact.form.company
+[20:07:19.875] contact.form.companyPlaceholder
+[20:07:19.875] contact.form.email
+[20:07:19.875] contact.form.emailPlaceholder
+[20:07:19.876] contact.form.firstName
+[20:07:19.876] contact.form.firstNamePlaceholder
+[20:07:19.876] contact.form.lastName
+[20:07:19.876] contact.form.lastNamePlaceholder
+[20:07:19.876] contact.form.phone
+[20:07:19.876] contact.form.phonePlaceholder
+[20:07:19.877] contact.form.projectDetails
+[20:07:19.877] contact.form.projectDetailsPlaceholder
+[20:07:19.877] contact.form.sendMessage
+[20:07:19.877] contact.form.service
+[20:07:19.888] contact.form.service.aiConsulting
+[20:07:19.888] contact.form.service.bigDataConsulting
+[20:07:19.888] contact.form.service.businessIntelligence
+[20:07:19.888] contact.form.service.dataEngineering
+[20:07:19.888] contact.form.service.generativeAIDevelopment
+[20:07:19.888] contact.form.service.mlConsulting
+[20:07:19.888] contact.form.service.other
+[20:07:19.888] contact.form.servicePlaceholder
+[20:07:19.888] contact.form.title
+[20:07:19.888] contact.hero.description
+[20:07:19.888] contact.hero.title
+[20:07:19.888] contact.info.description
+[20:07:19.888] contact.info.email
+[20:07:19.888] contact.info.hours
+[20:07:19.888] contact.info.office
+[20:07:19.888] contact.info.phone
+[20:07:19.888] contact.info.schedule.cta
+[20:07:19.888] contact.info.schedule.description
+[20:07:19.888] contact.info.schedule.title
+[20:07:19.888] contact.info.title
+[20:07:19.889] footer.caseStudies.carbonCreditAi
+[20:07:19.889] footer.caseStudies.counterfeitDetection
+[20:07:19.889] footer.caseStudies.retailAutomation
+[20:07:19.889] footer.caseStudies.windTurbineAi
+[20:07:19.889] footer.viewAllCaseStudies
+[20:07:19.889] footer.viewAllIndustries
+[20:07:19.889] footer.viewAllProducts
+[20:07:19.889] footer.viewAllServices
+[20:07:19.889] footer.viewAllSolutions
+[20:07:19.889] nav.about
+[20:07:19.889] nav.contact
+[20:07:19.889] nav.services
+[20:07:19.889] nav.testimonials
+[20:07:19.889] servicesPage.cta.bookConsultation
+[20:07:19.889] servicesPage.cta.description
+[20:07:19.889] servicesPage.cta.getStarted
+[20:07:19.889] servicesPage.cta.title
+[20:07:19.889] servicesPage.deploy.aiIntegration.description
+[20:07:19.889] servicesPage.deploy.aiIntegration.title
+[20:07:19.889] servicesPage.deploy.category
+[20:07:19.889] servicesPage.deploy.mlopsConsulting.description
+[20:07:19.889] servicesPage.deploy.mlopsConsulting.title
+[20:07:19.889] servicesPage.develop.aiPoc.description
+[20:07:19.889] servicesPage.develop.aiPoc.title
+[20:07:19.889] servicesPage.develop.category
+[20:07:19.889] servicesPage.develop.generativeAIDevelopment.description
+[20:07:19.889] servicesPage.develop.generativeAIDevelopment.title
+[20:07:19.889] servicesPage.develop.llmsDevelopment.description
+[20:07:19.889] servicesPage.develop.llmsDevelopment.title
+[20:07:19.889] servicesPage.develop.mlConsulting.description
+[20:07:19.889] servicesPage.develop.mlConsulting.title
+[20:07:19.889] servicesPage.discover.aiConsulting.description
+[20:07:19.889] servicesPage.discover.aiConsulting.title
+[20:07:19.889] servicesPage.discover.bigDataConsulting.description
+[20:07:19.889] servicesPage.discover.bigDataConsulting.title
+[20:07:19.889] servicesPage.discover.category
+[20:07:19.889] servicesPage.discover.generativeAIConsulting.description
+[20:07:19.889] servicesPage.discover.generativeAIConsulting.title
+[20:07:19.889] servicesPage.hero.description
+[20:07:19.889] servicesPage.hero.title
+[20:07:19.889] servicesPage.learnMore
+[20:07:19.889] servicesPage.organizeData.businessIntelligence.description
+[20:07:19.890] servicesPage.organizeData.businessIntelligence.title
+[20:07:19.890] servicesPage.organizeData.category
+[20:07:19.890] servicesPage.organizeData.dataEngineering.description
+[20:07:19.890] servicesPage.organizeData.dataEngineering.title
+[20:07:19.890] servicesPage.organizeData.databricksDeployment.description
+[20:07:19.890] servicesPage.organizeData.databricksDeployment.title
+[20:07:19.890] site.title
+[20:07:19.912] No changes: /vercel/path0/locales/en.json
+[20:07:19.912] No changes: /vercel/path0/locales/es.json
+[20:07:19.913] No changes: /vercel/path0/locales/fr.json
+[20:07:19.913] No changes: /vercel/path0/locales/de.json
+[20:07:19.913] No changes: /vercel/path0/locales/pl.json
+[20:07:19.914] No changes: /vercel/path0/locales/pt.json
+[20:07:19.914] No changes: /vercel/path0/locales/ar.json
+[20:07:19.914] No changes: /vercel/path0/locales/tr.json
+[20:07:19.914] No changes: /vercel/path0/locales/ja.json
+[20:07:19.915] i18n locale files are up to date.
+[20:07:19.918] 
+[20:07:19.918] > ai-on-turbo@0.1.0 build
+[20:07:19.918] > next build
+[20:07:19.918] 
+[20:07:20.667]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[20:07:20.839]    ▲ Next.js 15.3.5
+[20:07:20.840] 
+[20:07:20.876]    Creating an optimized production build ...
+[20:07:21.470]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[20:07:27.083]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[20:07:28.336]  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+[20:07:31.763]  ✓ Compiled successfully in 7.0s
+[20:07:31.768]    Linting and checking validity of types ...
+[20:07:44.245] Failed to compile.
+[20:07:44.246] 
+[20:07:44.246] ./src/components/Header.tsx:16:26
+[20:07:44.246] Type error: Argument of type 'string' is not assignable to parameter of type 'Locale | undefined'.
+[20:07:44.247] 
+[20:07:44.247] [0m [90m 14 |[39m   [90m// Helper function to remove "nav." prefix for English locale only[39m[0m
+[20:07:44.247] [0m [90m 15 |[39m   [36mconst[39m getLabel [33m=[39m (key[33m:[39m string[33m,[39m locale[33m:[39m string) [33m=>[39m {[0m
+[20:07:44.248] [0m[31m[1m>[22m[39m[90m 16 |[39m     [36mconst[39m label [33m=[39m t(key[33m,[39m locale)[33m;[39m[0m
+[20:07:44.248] [0m [90m    |[39m                          [31m[1m^[22m[39m[0m
+[20:07:44.248] [0m [90m 17 |[39m     [36mif[39m (locale [33m===[39m [32m'en'[39m) {[0m
+[20:07:44.248] [0m [90m 18 |[39m       [36mreturn[39m label[33m.[39mreplace([35m/^nav\./[39m[33m,[39m [32m''[39m)[33m;[39m[0m
+[20:07:44.248] [0m [90m 19 |[39m     }[0m
+[20:07:44.271] Next.js build worker exited with code: 1 and signal: null
+[20:07:44.290] Error: Command "npm run build" exited with 1
+[20:07:44.530] 
+[20:07:47.551] Exiting build container
