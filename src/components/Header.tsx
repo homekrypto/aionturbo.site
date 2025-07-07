@@ -801,7 +801,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                 <Link
                   href={`/${locale}/about`}
                   className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
-                  onClick={()={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {t("nav.about", locale)}
                 </Link>
