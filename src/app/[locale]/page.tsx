@@ -10,7 +10,12 @@ export default async function LocalizedHome({ params }: LocalizedPageProps) {
   const { locale } = await params;
   const translations = await getServerSideTranslations(locale);
   
-  const t = createTranslationFunction(translations.common || translations);
+  // Debug: Log what translations are loaded
+  console.log('Locale:', locale);
+  console.log('Translations keys:', Object.keys(translations).slice(0, 5));
+  console.log('hero.title value:', translations['hero.title']);
+  
+  const t = createTranslationFunction(translations);
 
   return (
     <div className="min-h-screen bg-white text-gray-900">

@@ -19,20 +19,12 @@ export const getServerSideTranslations = async (locale: string) => {
   }
 };
 
-export const createTranslationFunction = (translations: unknown) => {
+export const createTranslationFunction = (translations: Record<string, string>) => {
   return (key: string, fallback: string) => {
-    const keys = key.split('.');
-    let value: unknown = translations || {};
-    
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
-        value = (value as Record<string, unknown>)[k];
-      } else {
-        return fallback;
-      }
+    if (typeof translations === 'object' && translations !== null && key in translations) {
+      return translations[key] as string;
     }
-    
-    return typeof value === 'string' ? value : fallback;
+    return fallback;
   };
 };
 

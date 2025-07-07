@@ -3,8 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   experimental: {
     // Disable some experimental features that might cause issues
-    serverComponentsExternalPackages: [],
-    // Enable more stable build process
     optimizePackageImports: [],
   },
   // Disable webpack cache temporarily
@@ -15,7 +13,6 @@ const nextConfig: NextConfig = {
     return config;
   },
   // Add some performance optimizations
-  swcMinify: true,
   compress: true,
   async rewrites() {
     return [
