@@ -1,10 +1,6 @@
 import { getServerSideTranslations, createTranslationFunction } from "@/lib/i18n";
 
-interface LocalizedPageProps {
-  params: { locale: string };
-}
-
-export default async function LocalizedHome({ params }: LocalizedPageProps) {
+export default async function LocalizedHome({ params }: { params: { locale: string } }) {
   const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   
