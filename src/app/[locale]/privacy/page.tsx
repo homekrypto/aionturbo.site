@@ -1,10 +1,6 @@
 import { getServerSideTranslations, createTranslationFunction } from "@/lib/i18n";
 
-interface PrivacyPageProps {
-  params: { locale: string };
-}
-
-export default async function PrivacyPage({ params }: PrivacyPageProps) {
+export default async function Page({ params }: { params: { locale: string } }) {
   const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   const t = createTranslationFunction(translations.common || translations);
