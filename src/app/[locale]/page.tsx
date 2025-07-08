@@ -1,13 +1,11 @@
 import { getServerSideTranslations, createTranslationFunction } from "@/lib/i18n";
 
 interface LocalizedPageProps {
-  params: Promise<{
-    locale: string;
-  }>;
+  params: { locale: string };
 }
 
 export default async function LocalizedHome({ params }: LocalizedPageProps) {
-  const { locale } = await params;
+  const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   
   // Debug: Log what translations are loaded

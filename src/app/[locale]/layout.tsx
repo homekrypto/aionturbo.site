@@ -23,11 +23,11 @@ const geistMono = Geist_Mono({
 
 interface LocalizedLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   const t = createTranslationFunction(translations.common || translations);
   return {
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function LocalizedLayout({ children, params }: LocalizedLayoutProps) {
-  const { locale } = await params;
+  const { locale } = params;
   const isRTL = locale === 'ar';
   return (
     <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'}>
