@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { t } from "@/lib/t";
+import GlobalFooterControls from "./GlobalFooterControls";
 
 export default function Header({ locale = "en" }: { locale?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -639,7 +640,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+            <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 overflow-y-auto max-h-[80vh]">
               <div className="px-4 py-2 space-y-1">
                 <Link
                   href={`/${locale}`}
@@ -815,7 +816,7 @@ export default function Header({ locale = "en" }: { locale?: string }) {
                 </Link>
 
                 <div className="pt-4 pb-2">
-                  <div id="global-footer-controls-container-mobile"></div>
+                  <GlobalFooterControls />
                 </div>
               </div>
             </div>
