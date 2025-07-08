@@ -1,6 +1,6 @@
 import { getServerSideTranslations, createTranslationFunction } from "@/lib/i18n";
 
-export default async function Page({ params }) {
+export default async function Page({ params }: { params: { locale: string } }) {
   const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   const t = createTranslationFunction(translations.common || translations);
