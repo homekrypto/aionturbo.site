@@ -391,12 +391,12 @@ export default function Header({ locale = "en" }: { locale?: string }) {
         }
 
         [data-theme="dark"] .nav-trigger {
-          color: #d1d5db;
+          color: #ffffff !important;
         }
 
         [data-theme="dark"] .nav-trigger:hover {
           background: #374151;
-          color: #93c5fd;
+          color: #ffffff !important;
         }
 
         .nav-trigger svg {

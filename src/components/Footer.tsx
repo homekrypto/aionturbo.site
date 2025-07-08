@@ -85,7 +85,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
               ))}
               <li>
                 <Link href={`/${locale}/services`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
-                  {t("footer.viewAllServices")}
+                  {t("footer.viewAllServices", effectiveLocale)}
                 </Link>
               </li>
             </ul>
@@ -104,7 +104,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
               ))}
               <li>
                 <Link href={`/${locale}/products`} className="text-indigo-600 hover:text-indigo-500 transition dark:text-indigo-400 dark:hover:text-indigo-300">
-                  {t("footer.viewAllProducts")}
+                  {t("footer.viewAllProducts", effectiveLocale)}
                 </Link>
               </li>
             </ul>

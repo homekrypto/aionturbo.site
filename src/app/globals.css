@@ -231,3 +231,7 @@ a:focus {
 .dropdown-trigger.debug:hover {
   border: 1px solid green !important;
 }
+
+[data-theme="dark"] .nav-trigger, [data-theme="dark"] a.nav-trigger, [data-theme="dark"] button.nav-trigger {
+  color: #fff !important;
+}
