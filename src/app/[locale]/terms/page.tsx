@@ -1,13 +1,11 @@
 import { getServerSideTranslations, createTranslationFunction } from "@/lib/i18n";
 
 interface TermsPageProps {
-  params: Promise<{
-    locale: string;
-  }>;
+  params: { locale: string };
 }
 
 export default async function TermsPage({ params }: TermsPageProps) {
-  const { locale } = await params;
+  const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   const t = createTranslationFunction(translations.common || translations);
 
