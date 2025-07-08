@@ -41,14 +41,8 @@ const servicePages = [
 const createLocalizedPageTemplate = (originalPath, pageType, slug) => {
   return `import { getServerSideTranslations, createTranslationFunction } from "@/lib/i18n";
 
-interface ${slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}PageProps {
-  params: Promise<{
-    locale: string;
-  }>;
-}
-
-export default async function ${slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page({ params }: ${slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}PageProps) {
-  const { locale } = await params;
+export default async function Page({ params }: { params: { locale: string } }) {
+  const { locale } = params;
   const translations = await getServerSideTranslations(locale);
   const t = createTranslationFunction(translations.common || translations);
 
@@ -59,14 +53,14 @@ export default async function ${slug.split('-').map(word => word.charAt(0).toUpp
 }
 
 // Metadata
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  const { locale } = params;
   
   return {
     title: 'AI on Turbo - ${slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}',
     description: 'Professional AI solutions and services',
     alternates: {
-      canonical: \`/\${locale}/${pageType}/${slug}\`,
+      canonical: \`\`${'${locale}'}/${pageType}/${slug}\`\`,
     },
   };
 }
